@@ -900,7 +900,7 @@ SOFTWARE.
 
 If you find this project useful, please give it a star on GitHub!
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/ShadowDaemon_Ultimate.svg?style=social&label=Star)](https://github.com/yourusername/ShadowDaemon_Ultimate)
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/ShadowDaemon_Ultimate.svg?style=social&label=Star)](https://github.com/hidayat-tanjung/ShadowDaemon_Ultimate)
 
 ---
 
