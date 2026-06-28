@@ -1,6 +1,6 @@
 # 🐉 SHADOWDAEMON ULTIMATE EDITION
 
-![ShadowDaemon Banner](https://i.ibb.co/your-image-link/shadow.jpg)
+<img width="1254" height="1254" alt="1000294753" src="https://github.com/user-attachments/assets/dfe97fc5-f98e-47e5-8dd2-e03a1ddb372f" />
 
 > *"hack the system. own the root. stay anonymous."*
 
