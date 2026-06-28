@@ -257,8 +257,8 @@ pip3 install -r requirements.txt
 ```json
 {
     "c2_type": "telegram",
-    "telegram_token": "8956135458:AAF4LZiAnrOOyC7Nu-I8FIaeRIn6F0G2f68",
-    "telegram_chat_id": "752995113",
+    "telegram_token": "YOUR_BOT_TOKEN_FROM_BOTFATHER",
+    "telegram_chat_id": "YOUR_CHAT_ID",
     "firebase_url": "https://your-project.firebaseio.com/commands/{uid}.json",
     "persistence": false,
     "miner_wallet": "YOUR_MONERO_WALLET_ADDRESS",
@@ -288,8 +288,8 @@ pip3 install -r requirements.txt
 
 3. **Update Config:**
    ```json
-   "telegram_token": "123456789:ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-   "telegram_chat_id": "123456789"
+   "telegram_token": "YOUR_BOT_TOKEN_FROM_BOTFATHER",
+"telegram_chat_id": "YOUR_CHAT_ID", 
    ```
 
 ---
