@@ -393,3 +393,11 @@ cat: /var/lib/dbus/machine-id: No such file or directory
 /data/data/com.termux/files/usr/bin/sh: 1: lsblk: not found
 /data/data/com.termux/files/usr/bin/sh: 1: lsblk: not found
 /data/data/com.termux/files/usr/bin/sh: 1: lsblk: not found
+/data/data/com.termux/files/usr/bin/sh: 1: lsblk: not found
+/data/data/com.termux/files/usr/bin/sh: 1: lsblk: not found
+/data/data/com.termux/files/usr/bin/sh: 1: lsblk: not found
+/data/data/com.termux/files/usr/bin/sh: 1: lsblk: not found
+/data/data/com.termux/files/usr/bin/sh: 1: lsblk: not found
+/data/data/com.termux/files/usr/bin/sh: 1: lsblk: not found
+/data/data/com.termux/files/usr/bin/sh: 1: lsblk: not found
+/data/data/com.termux/files/usr/bin/sh: 1: lsblk: not found
