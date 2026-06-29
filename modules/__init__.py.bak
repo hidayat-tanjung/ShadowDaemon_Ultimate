@@ -1,0 +1,102 @@
+# ====== CORE MODULES ======
+from . import shell
+from . import keylogger
+from . import webcam
+from . import mic
+from . import screenshot
+from . import ransomware
+from . import miner
+from . import ddos
+from . import persistence
+from . import payload_gen
+from . import crypter
+from . import usb_spreader
+from . import password_stealer
+from . import screen_recorder
+from . import geo_tracker
+from . import wifi_stealer
+from . import remote_control
+from . import anti_forensic
+from . import hider
+from . import port_knocking
+from . import dns_tunneling
+from . import cpu_microcode
+from . import network_exploiter
+from . import plc_scada
+from . import bootkit
+from . import bios_rootkit
+from . import hardware_keylogger
+from . import usb_rubber_ducky
+
+# ====== NEW v4.0 MODULES ======
+# Monitoring & Surveillance
+from . import keylog_persist
+from . import screen_stream
+from . import audio_stream
+from . import webcam_spy
+from . import mic_spy
+from . import clipboard_stealer
+from . import browser_history
+from . import cookies_stealer
+from . import notification_spy
+from . import wallpaper_changer
+
+# Reconnaissance
+from . import port_scanner
+from . import mass_scanner
+from . import admin_finder
+from . import dns_enum
+from . import whois_lookup
+
+# Attacks & Exploits
+from . import log4shell
+from . import spring4shell
+from . import eternalblue
+from . import zerologon
+from . import printnightmare
+from . import bluekeep
+from . import smbghost
+from . import proxylogon
+from . import petitpotam
+from . import sql_injection
+from . import xss_tester
+from . import lfi_rfi_tester
+from . import cmd_injection
+from . import docker_escape
+from . import k8s_attack
+from . import ad_attack
+from . import bloodhound
+from . import mimikatz
+from . import responder
+from . import ntlm_relay
+from . import kerberos
+
+# Stealers
+from . import crypto_stealer
+from . import ssh_stealer
+from . import cloud_stealer
+from . import token_stealer
+
+# Payload & Tools
+from . import reverse_shell_gen
+from . import exe_builder
+from . import exploit_suggester
+from . import auto_update
+
+# File Management
+from . import file_browser
+from . import file_downloader
+from . import file_uploader
+
+# System Control
+from . import log_cleaner
+from . import vpn_killer
+from . import tor_killer
+from . import self_destruct
+
+# C2 & Communication
+from . import icmp_tunneling
+
+# AI & Automation
+from . import exploit_suggester
+from . import scheduled_tasks

